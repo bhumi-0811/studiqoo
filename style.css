@@ -1190,22 +1190,7 @@ em{
         display:block;
     }
 
-    .nav-links{
-        position:absolute;
-        top:70px;
-        left:0;
-        width:100%;
-
-        background:var(--paper);
-        border-bottom:1px solid var(--line);
-
-        flex-direction:column;
-        align-items:center;
-
-        padding:30px 0;
-
-        display:none;
-    }
+    /* nav-links mobile handled in MOBILE RESPONSIVE section below */
 
     .nav-links.active{
         display:flex;
@@ -1511,4 +1496,435 @@ em{
 .video-card-content p{
     color:var(--muted);
     font-size:.92rem;
+}
+
+
+/* ================================================
+   MOBILE RESPONSIVE — comprehensive pass
+   Covers all breakpoints: 768px (tablet/phablet)
+   and 480px (small phones)
+================================================ */
+
+/* ---- Navbar ---- */
+@media(max-width:768px){
+
+    .nav-cta{ display:none; }
+
+    .nav-links{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        background:var(--paper);
+        border:none;
+
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+
+        gap:28px;
+        padding:0;
+
+        display:none;
+        z-index:999;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        font-size:1.3rem;
+        font-weight:700;
+    }
+
+    .menu-toggle{
+        display:block;
+        z-index:1001;
+        position:relative;
+    }
+
+    .logo{
+        z-index:1001;
+        position:relative;
+    }
+
+}
+
+/* ---- Hero ---- */
+@media(max-width:992px){
+
+    .hero{
+        padding-top:100px;
+        padding-bottom:60px;
+        min-height:auto !important;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr !important;
+        gap:40px;
+        text-align:center;
+    }
+
+    .hero-content h1{
+        font-size:2.4rem;
+    }
+
+    .hero-content p{
+        max-width:100%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-illustration{
+        max-width:480px;
+        margin:0 auto;
+    }
+
+    .doodle{
+        display:none;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+    .eyebrow{
+        font-size:.72rem;
+    }
+
+}
+
+/* ---- About two-col ---- */
+@media(max-width:992px){
+
+    .about-container{
+        grid-template-columns:1fr !important;
+        gap:40px;
+    }
+
+    .about-image{
+        max-width:460px;
+        margin:0 auto;
+    }
+
+}
+
+/* ---- Sections general padding ---- */
+@media(max-width:768px){
+
+    .about,
+    .services,
+    .compare,
+    .clients,
+    .portfolio,
+    .testimonials,
+    .pricing,
+    .contact,
+    .faq,
+    .why-us,
+    .stats,
+    .process,
+    .video-section,
+    .premium-section{
+        padding:80px 0;
+    }
+
+    .section-header{
+        margin-bottom:44px;
+    }
+
+    .section-header h2{
+        font-size:1.9rem;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .about,
+    .services,
+    .compare,
+    .clients,
+    .portfolio,
+    .testimonials,
+    .pricing,
+    .contact,
+    .faq,
+    .why-us,
+    .stats,
+    .process,
+    .video-section,
+    .premium-section{
+        padding:60px 0;
+    }
+
+    .section-header h2{
+        font-size:1.65rem;
+    }
+
+}
+
+/* ---- Services grid ---- */
+@media(max-width:600px){
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ---- Compare cards ---- */
+@media(max-width:768px){
+
+    .compare-grid{
+        grid-template-columns:1fr;
+    }
+
+    .compare-card{
+        padding:38px 28px;
+    }
+
+}
+
+/* ---- Stats strip ---- */
+@media(max-width:768px){
+
+    .stats{
+        padding:60px 0;
+    }
+
+    .stats-box{
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+        border:none;
+    }
+
+    .stat-card{
+        border-right:none !important;
+        border-bottom:1px solid var(--line);
+        padding-bottom:24px;
+    }
+
+    .stat-card:nth-child(odd){
+        border-right:1px solid var(--line) !important;
+    }
+
+    .stat-card:last-child,
+    .stat-card:nth-last-child(2):nth-child(odd){
+        border-bottom:none;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .stats-box{
+        grid-template-columns:1fr;
+    }
+
+    .stat-card{
+        border-right:none !important;
+    }
+
+    .stat-card:nth-child(odd){
+        border-right:none !important;
+    }
+
+    .stat-card:last-child{
+        border-bottom:none;
+    }
+
+}
+
+/* ---- Clients grid ---- */
+@media(max-width:600px){
+
+    .clients-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:380px){
+
+    .clients-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ---- Portfolio grid ---- */
+@media(max-width:680px){
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ---- Testimonials ---- */
+@media(max-width:680px){
+
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ---- Pricing ---- */
+@media(max-width:900px){
+
+    .pricing-grid{
+        grid-template-columns:1fr;
+        max-width:480px;
+        margin:0 auto;
+    }
+
+}
+
+/* ---- Process ---- */
+@media(max-width:600px){
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ---- Premium card ---- */
+@media(max-width:768px){
+
+    .premium-card{
+        grid-template-columns:1fr;
+        padding:38px 28px;
+    }
+
+    .premium-card h2{
+        font-size:1.7rem;
+    }
+
+}
+
+/* ---- Services page service-blocks ---- */
+@media(max-width:600px){
+
+    .service-checklist{
+        grid-template-columns:1fr;
+    }
+
+    .service-block{
+        padding:44px 0;
+    }
+
+    .service-block-header h3{
+        font-size:1.3rem;
+    }
+
+}
+
+/* ---- Video grid ---- */
+@media(max-width:680px){
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ---- Wave divider ---- */
+@media(max-width:768px){
+
+    .wave-divider svg{
+        height:55px;
+    }
+
+    .wave-dot{
+        display:none;
+    }
+
+}
+
+/* ---- Contact form ---- */
+@media(max-width:600px){
+
+    .contact-form{
+        gap:14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        padding:14px 16px;
+        font-size:.95rem;
+    }
+
+}
+
+/* ---- Services CTA ---- */
+@media(max-width:600px){
+
+    .services-cta{
+        padding:70px 0;
+    }
+
+    .services-cta h2{
+        font-size:1.7rem;
+    }
+
+}
+
+/* ---- Buttons ---- */
+@media(max-width:480px){
+
+    .btn{
+        padding:14px 26px;
+        font-size:.95rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+}
+
+/* ---- Footer ---- */
+@media(max-width:900px){
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+        gap:40px;
+    }
+
+    .footer-brand{
+        grid-column:1/-1;
+    }
+
+}
+
+@media(max-width:560px){
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-brand{
+        grid-column:auto;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+    }
+
 }
