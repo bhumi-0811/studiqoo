@@ -4,31 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Studiqoo</title>
-
-    <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navbar -->
-
 <nav class="navbar">
-
     <div class="container nav-container">
-
-        <div class="logo">
-            Studi<span>qoo</span>
-        </div>
-<div class="menu-toggle">
-    <i class="fa-solid fa-bars"></i>
-</div>
+        <div class="logo">Studi<span>qoo</span></div>
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -37,119 +24,73 @@
             <li><a class="active" href="contact.html">Contact</a></li>
             <li><a href="contact.html" class="nav-cta">Book A Call</a></li>
         </ul>
-
     </div>
-
 </nav>
 
+<!-- Contact -->
+<section style="padding:140px 0 100px;">
+    <div class="container">
+        <div class="contact-wrap">
 
-<!-- Hero -->
+            <div class="contact-info">
+                <span class="section-label">Get In Touch</span>
+                <h2>Let's build your growth engine</h2>
+                <p>Tell us about your brand and we'll put together a plan tailored to your goals. We typically reply within 24 hours.</p>
+                <div class="contact-detail"><i class="fa-solid fa-envelope"></i>teamstudiqoo@gmail.com</div>
+                <div class="contact-detail"><i class="fa-solid fa-globe"></i>studiqoo.in</div>
+                <div class="contact-detail"><i class="fa-regular fa-clock"></i>Mon – Fri, 9am – 6pm IST</div>
+            </div>
 
-<section class="hero" style="min-height:50vh;">
-
-    <div class="container hero-container" style="grid-template-columns:1fr;">
-
-        <div class="hero-content" style="max-width:680px;">
-
-            <span class="eyebrow">Get In Touch</span>
-
-            <h1>
-                Contact <span class="gradient-text">Us</span>
-            </h1>
-
-            <p>
-                Let's discuss how Studiqoo can help you grow.
-            </p>
+            <form class="contact-form" id="contactForm">
+                <input type="text" name="fullName" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <textarea name="message" rows="6" placeholder="Tell us about your brand and goals" required></textarea>
+                <button class="btn btn-primary" type="submit" style="align-self:flex-start;">Send Message</button>
+            </form>
 
         </div>
-
     </div>
-
 </section>
 
-
-<!-- Contact Section -->
-
-<section class="contact">
-
+<!-- Info cards -->
+<section class="services-bg">
     <div class="container">
-
-        <div class="section-header">
-            <span class="section-tag">Get In Touch</span>
-            <h2>We'd Love To Hear From You</h2>
-        </div>
-
-        <form class="contact-form" id="contactForm">
-
-            <input type="text" name="fullName" placeholder="Full Name" required>
-
-            <input type="email" name="email" placeholder="Email Address" required>
-
-            <input type="tel" name="phone" placeholder="Phone Number">
-
-            <textarea rows="6" name="message"
-            placeholder="Tell us about your brand" required></textarea>
-
-            <button class="btn btn-primary" type="submit">
-                Send Message
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
-
-
-<!-- Contact Info -->
-
-<section class="services">
-
-    <div class="container">
-
         <div class="services-grid">
-
             <div class="service-card">
-                <i class="fa-solid fa-envelope"></i>
-                <h3>Email</h3>
-                <p>teamstudiqoo@gmail.com</p>
+                <div class="service-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="service-card-text">
+                    <h3>Email</h3>
+                    <p>teamstudiqoo@gmail.com</p>
+                </div>
             </div>
-
             <div class="service-card">
-                <i class="fa-solid fa-globe"></i>
-                <h3>Website</h3>
-                <p>studiqoo.in</p>
+                <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                <div class="service-card-text">
+                    <h3>Website</h3>
+                    <p>studiqoo.in</p>
+                </div>
             </div>
-
             <div class="service-card">
-                <i class="fa-solid fa-comments"></i>
-                <h3>Let's Talk</h3>
-                <p>We typically reply within 24 hours.</p>
+                <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+                <div class="service-card-text">
+                    <h3>Response Time</h3>
+                    <p>We reply within 24 hours on business days.</p>
+                </div>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- ================= FOOTER ================= -->
+<button id="topBtn">↑</button>
 
 <footer class="footer">
-
     <div class="container">
-
-        <div class="footer-grid">
-
+        <div class="footer-top">
             <div class="footer-brand">
                 <h2>Studi<span>qoo</span></h2>
-                <p>
-                    A growth studio for founders and brands — personal branding,
-                    content, video and creator partnerships under one roof.
-                </p>
+                <p>A growth studio for founders and brands — personal branding, content, video and creator partnerships under one roof.</p>
             </div>
-
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
@@ -161,58 +102,34 @@
                     <li><a href="services.html">Web3 Growth Marketing</a></li>
                 </ul>
             </div>
-
             <div class="footer-col">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="index.html#faq">FAQ</a></li>
-                    <li><a href="services.html">Our Process</a></li>
-                </ul>
-            </div>
-
             <div class="footer-col">
                 <h4>Connect</h4>
                 <ul>
                     <li><a href="mailto:teamstudiqoo@gmail.com">teamstudiqoo@gmail.com</a></li>
-                    <li><a href="contact.html">Book A Call</a></li>
                     <li><a href="https://studiqoo.in">studiqoo.in</a></li>
                 </ul>
             </div>
-
         </div>
-
         <div class="footer-bottom">
-
-            <p class="copyright">
-                © 2026 Studiqoo. All Rights Reserved.
-            </p>
-
+            <p class="copyright">© 2026 Studiqoo. All rights reserved.</p>
             <div class="footer-socials">
                 <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </div>
-
         </div>
-
     </div>
-
 </footer>
 
-<button id="topBtn">↑</button>
-
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
