@@ -1,169 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | Studiqoo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing | Studiqoo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-    <div class="container nav-container">
-        <div class="logo">Studi<span>qoo</span></div>
-        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="active" href="pricing.html">Pricing</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html" class="nav-cta">Book A Call</a></li>
-        </ul>
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-icon" viewBox="0 0 68 68" fill="none">
+        <circle cx="7" cy="32" r="4" fill="#5B6AFF" opacity=".7"/>
+        <circle cx="7" cy="44" r="3" fill="#7B4FDF" opacity=".6"/>
+        <rect x="13" y="19" width="14" height="5" rx="2.5" fill="#3B5FD9"/>
+        <rect x="13" y="28" width="18" height="5" rx="2.5" fill="#5B6AFF"/>
+        <rect x="13" y="37" width="15" height="5" rx="2.5" fill="#5B6AFF"/>
+        <rect x="13" y="46" width="11" height="5" rx="2.5" fill="#7B4FDF" opacity=".8"/>
+        <rect x="42" y="14" width="22" height="32" rx="5" fill="#3B2FA0" opacity=".7"/>
+        <rect x="38" y="17" width="22" height="32" rx="5" fill="#5540C8" opacity=".85"/>
+        <defs><linearGradient id="cg" x1="33" y1="20" x2="59" y2="52" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#4A7AFF"/><stop offset="100%" stop-color="#9B5CFF"/></linearGradient></defs>
+        <rect x="33" y="20" width="24" height="34" rx="6" fill="url(#cg)"/>
+        <circle cx="42" cy="31" r="5" fill="white" opacity=".9"/>
+        <rect x="50" y="29" width="4" height="4" rx="2" fill="white" opacity=".85"/>
+        <circle cx="39" cy="46" r="2.2" fill="white" opacity=".85"/>
+        <circle cx="45" cy="46" r="2.2" fill="white" opacity=".85"/>
+        <circle cx="51" cy="46" r="2.2" fill="white" opacity=".85"/>
+      </svg>
+      <span class="logo-text">Studi<span>qoo</span></span>
+    </a>
+    <div class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Book A Call</a></li>
+      </ul>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="mob-cta">Book A Call</a>
+</div>
 
-<!-- Hero -->
+
+<!-- HERO -->
 <section class="hero" style="padding:140px 0 80px;">
-    <div class="container">
-        <div class="hero-inner">
-            <span class="eyebrow">Pricing</span>
-            <h1>Simple, <span class="accent-text">transparent pricing</span></h1>
-            <p>Flexible plans designed for founders and brands at every stage of growth.</p>
-        </div>
-    </div>
+  <div class="container">
+    <span class="label">Pricing</span>
+    <h1 style="font-size:clamp(2rem,4vw,3.2rem); max-width:640px; margin-bottom:16px;">
+      Simple, <em>transparent pricing</em>
+    </h1>
+    <p style="color:var(--muted); max-width:520px; font-size:1rem; line-height:1.8;">
+      Flexible plans for healthcare practices and service businesses at every stage of growth. No hidden fees, no lock-ins.
+    </p>
+  </div>
 </section>
 
-<!-- Pricing -->
-<section class="pricing-bg">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">Plans</span>
-            <h2>Choose your plan</h2>
-        </div>
-        <div class="pricing-grid">
 
-            <div class="pricing-card hidden">
-                <h3>Starter</h3>
-                <div class="price">₹29,999</div>
-                <div class="price-period">per month</div>
-                <ul class="pricing-list">
-                    <li><i class="fa-solid fa-circle"></i>Social Media Management</li>
-                    <li><i class="fa-solid fa-circle"></i>Content Calendar</li>
-                    <li><i class="fa-solid fa-circle"></i>2 Edited Videos / Month</li>
-                    <li><i class="fa-solid fa-circle"></i>Monthly Report</li>
-                </ul>
-                <a href="contact.html" class="btn btn-outline">Get Started</a>
-            </div>
-
-            <div class="pricing-card featured hidden">
-                <h3>Growth</h3>
-                <div class="price">₹74,999</div>
-                <div class="price-period">per month</div>
-                <ul class="pricing-list">
-                    <li><i class="fa-solid fa-circle"></i>Founder Personal Branding</li>
-                    <li><i class="fa-solid fa-circle"></i>Content Strategy &amp; Creation</li>
-                    <li><i class="fa-solid fa-circle"></i>KOL Campaign — 3 Creators</li>
-                    <li><i class="fa-solid fa-circle"></i>Weekly Reports</li>
-                </ul>
-                <a href="contact.html" class="btn btn-primary">Most Popular</a>
-            </div>
-
-            <div class="pricing-card hidden">
-                <h3>Scale</h3>
-                <div class="price">₹1,49,999</div>
-                <div class="price-period">per month</div>
-                <ul class="pricing-list">
-                    <li><i class="fa-solid fa-circle"></i>Founder Growth OS</li>
-                    <li><i class="fa-solid fa-circle"></i>Video Production &amp; Editing</li>
-                    <li><i class="fa-solid fa-circle"></i>Dedicated Account Manager</li>
-                    <li><i class="fa-solid fa-circle"></i>Priority Support</li>
-                </ul>
-                <a href="contact.html" class="btn btn-outline">Contact Sales</a>
-            </div>
-
-        </div>
+<!-- PRICING GRID -->
+<section style="background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="sh center">
+      <span class="label">Plans</span>
+      <h2>Choose your plan</h2>
+      <p>All plans include onboarding, dedicated support and monthly reporting. Custom packages available on request.</p>
     </div>
+
+    <div class="pricing-grid">
+
+      <div class="price-card reveal">
+        <h3>Starter</h3>
+        <div class="price-amount">₹29,999</div>
+        <div class="price-period">per month</div>
+        <ul class="price-list">
+          <li><i class="fa-solid fa-circle"></i>Social Media Management</li>
+          <li><i class="fa-solid fa-circle"></i>Content Calendar</li>
+          <li><i class="fa-solid fa-circle"></i>2 Edited Videos / Month</li>
+          <li><i class="fa-solid fa-circle"></i>Monthly Analytics Report</li>
+          <li><i class="fa-solid fa-circle"></i>Email Support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline">Get Started</a>
+      </div>
+
+      <div class="price-card featured reveal">
+        <h3>Growth</h3>
+        <div class="price-amount">₹74,999</div>
+        <div class="price-period">per month</div>
+        <ul class="price-list">
+          <li><i class="fa-solid fa-circle"></i>Founder Personal Branding</li>
+          <li><i class="fa-solid fa-circle"></i>Content Strategy &amp; Creation</li>
+          <li><i class="fa-solid fa-circle"></i>KOL Campaign — 3 Creators</li>
+          <li><i class="fa-solid fa-circle"></i>Paid Ads Management</li>
+          <li><i class="fa-solid fa-circle"></i>Weekly Reports</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Most Popular</a>
+      </div>
+
+      <div class="price-card reveal">
+        <h3>Scale</h3>
+        <div class="price-amount">₹1,49,999</div>
+        <div class="price-period">per month</div>
+        <ul class="price-list">
+          <li><i class="fa-solid fa-circle"></i>Founder Growth OS</li>
+          <li><i class="fa-solid fa-circle"></i>Video Production &amp; Editing</li>
+          <li><i class="fa-solid fa-circle"></i>Fractional Growth Consulting</li>
+          <li><i class="fa-solid fa-circle"></i>Dedicated Account Manager</li>
+          <li><i class="fa-solid fa-circle"></i>Priority Support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+      </div>
+
+    </div>
+  </div>
 </section>
+
+
+<!-- COMPARE MINI -->
+<section>
+  <div class="container">
+    <div class="sh center">
+      <span class="label">Why Studiqoo</span>
+      <h2>What you get vs. doing it alone</h2>
+    </div>
+    <div class="compare-grid">
+      <div class="cmp-card light reveal">
+        <h3>Hiring in-house or freelancers</h3>
+        <ul>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-xmark"></i></div><span>High hiring cost — ₹3–6L/month for even a small team</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-xmark"></i></div><span>No healthcare expertise — steep learning curve</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-xmark"></i></div><span>Siloed efforts — content, paid, and video disconnected</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-xmark"></i></div><span>Months to build processes and see results</span></li>
+        </ul>
+      </div>
+      <div class="cmp-card dark reveal">
+        <h3>Studiqoo — plug &amp; play growth team</h3>
+        <ul>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-check"></i></div><span>Full team from day one — strategy, content, video and paid</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-check"></i></div><span>Healthcare-native expertise built into every deliverable</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-check"></i></div><span>Integrated growth engine — all channels work together</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-check"></i></div><span>Results-focused from month one with clear KPIs</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- FAQ -->
-<section>
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">FAQ</span>
-            <h2>Pricing questions</h2>
-        </div>
-        <div class="faq-list">
-            <div class="faq-item"><button class="faq-question">Can I start with one service and add more later?</button><div class="faq-answer">Yes. Most clients start with a single service — usually Founder Personal Branding or Social Media Management — and expand as they see results.</div></div>
-            <div class="faq-item"><button class="faq-question">Is there a minimum contract length?</button><div class="faq-answer">We work on a 3-month minimum to give campaigns enough time to show real results. Most clients continue well beyond that.</div></div>
-            <div class="faq-item"><button class="faq-question">Do you offer custom packages?</button><div class="faq-answer">Yes. If none of the standard plans fit your needs, reach out and we'll build something tailored to your brand and goals.</div></div>
-        </div>
+<section style="background:var(--soft); border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="sh">
+      <span class="label">Pricing FAQ</span>
+      <h2>Common questions</h2>
     </div>
+    <div class="faq-list" style="max-width:760px;">
+      <div class="faq-item">
+        <button class="faq-q">Can I start with one service and add more later?</button>
+        <div class="faq-a">Yes. Most clients start with Founder Personal Branding or Social Media Management and expand as they see results. We make it easy to scale up.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there a minimum contract length?</button>
+        <div class="faq-a">We work on a 3-month minimum to give campaigns enough time to deliver real results. Most clients continue on rolling monthly agreements after that.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you offer custom packages?</button>
+        <div class="faq-a">Yes. If none of the standard plans fit, reach out and we'll build a tailored package around your practice's specific goals and budget.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What's included in onboarding?</button>
+        <div class="faq-a">A 60-minute brand discovery call, audience and competitor research, content pillars, and a 90-day growth roadmap — all completed in week one.</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 <!-- CTA -->
 <div class="cta-strip">
-    <div class="container">
-        <div class="cta-strip-inner">
-            <div>
-                <h2>Not sure which plan is right?</h2>
-                <p>Book a free call and we'll recommend the right fit.</p>
-            </div>
-            <a href="contact.html" class="btn btn-primary">Talk To Us</a>
-        </div>
+  <div class="container">
+    <div class="cta-inner">
+      <div>
+        <h2>Not sure which plan is right?</h2>
+        <p>Book a free 30-minute call and we'll recommend the best fit for your practice.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Talk To Us</a>
     </div>
+  </div>
 </div>
 
 <button id="topBtn">↑</button>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <h2>Studi<span>qoo</span></h2>
-                <p>A growth studio for founders and brands — personal branding, content, video and creator partnerships under one roof.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="services.html">Founder Personal Branding</a></li>
-                    <li><a href="services.html">Content Strategy &amp; Creation</a></li>
-                    <li><a href="services.html">Video Editing &amp; Repurposing</a></li>
-                    <li><a href="services.html">Social Media Management</a></li>
-                    <li><a href="services.html">Paid Growth &amp; Performance</a></li>
-                    <li><a href="services.html">Web3 Growth Marketing</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="mailto:teamstudiqoo@gmail.com">teamstudiqoo@gmail.com</a></li>
-                    <li><a href="https://studiqoo.in">studiqoo.in</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="copyright">© 2026 Studiqoo. All rights reserved.</p>
-            <div class="footer-socials">
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><h2>Studi<span>qoo</span></h2><p>A healthcare growth studio — personal branding, content, video and creator partnerships for practices that want to grow with trust.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Founder Personal Branding</a></li><li><a href="services.html">Healthcare Content Strategy</a></li><li><a href="services.html">Video Editing &amp; Repurposing</a></li><li><a href="services.html">Social Media Management</a></li><li><a href="services.html">Patient Acquisition</a></li><li><a href="services.html">Web3 Growth</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:teamstudiqoo@gmail.com">teamstudiqoo@gmail.com</a></li><li><a href="https://studiqoo.in">studiqoo.in</a></li></ul></div>
     </div>
+    <div class="footer-bottom">
+      <p class="copyright">© 2026 Studiqoo. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>

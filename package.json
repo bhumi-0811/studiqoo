@@ -1,11 +1,18 @@
 {
   "name": "studiqoo",
-  "version": "1.0.0",
-  "description": "Studiqoo Marketing website with contact form database",
+  "version": "2.0.0",
+  "description": "Studiqoo — Healthcare Growth Studio website with contact form database",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
+  "keywords": [
+    "studiqoo",
+    "healthcare",
+    "growth-studio",
+    "marketing"
+  ],
   "dependencies": {
     "express": "^4.19.2"
   }

@@ -1,274 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Studiqoo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Studiqoo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sb { padding: 52px 0; border-bottom: 1px solid var(--line); }
+    .sb:last-child { border-bottom: none; }
+    .sb-top { display:flex; align-items:center; gap:14px; margin-bottom:10px; flex-wrap:wrap; }
+    .sb-icon {
+      width:38px; height:38px; min-width:38px; border-radius:8px;
+      border:1px solid var(--line); background:var(--soft);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--ink-2); font-size:.9rem; flex-shrink:0;
+    }
+    .sb.hero-svc .sb-icon { background:var(--accent-bg); color:var(--royal); border-color:var(--royal); }
+    .sb h3 { font-size:1.25rem; font-weight:700; }
+    .hero-badge {
+      font-size:.68rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.08em; color:var(--royal); background:var(--accent-bg);
+      border:1px solid var(--line); padding:4px 12px; border-radius:999px;
+    }
+    .sb > p { color:var(--muted); font-size:.9rem; max-width:600px; margin:12px 0 22px; }
+    .sb-list {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:4px 28px;
+    }
+    .sb-list li {
+      display:flex; align-items:center; gap:9px;
+      font-size:.875rem; color:var(--ink-2); padding:6px 0;
+    }
+    .sb-list li i { font-size:.55rem; color:var(--ink-2); flex-shrink:0; }
+
+    .premium-banner {
+      background:var(--royal); color:#fff;
+      border-radius:14px; padding:48px 40px;
+      display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;
+      margin-bottom:64px;
+    }
+    .premium-banner h2 { font-size:1.8rem; color:#fff; margin-bottom:12px; }
+    .premium-banner p  { color:rgba(255,255,255,.7); font-size:.9rem; line-height:1.75; }
+    .premium-list li {
+      display:flex; gap:11px; align-items:center;
+      font-size:.875rem; color:rgba(255,255,255,.82);
+      padding:10px 0; border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    .premium-list li:last-child { border-bottom:none; }
+    .premium-list li i { font-size:.55rem; color:rgba(255,255,255,.45); flex-shrink:0; }
+
+    @media(max-width:768px) {
+      .premium-banner { grid-template-columns:1fr; padding:32px 24px; }
+      .sb-list { grid-template-columns:1fr; }
+    }
+  </style>
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="container nav-container">
-        <div class="logo">Studi<span>qoo</span></div>
-        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html" class="nav-cta">Book A Call</a></li>
-        </ul>
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-icon" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="7" cy="32" r="4" fill="#5B6AFF" opacity=".7"/>
+        <circle cx="7" cy="44" r="3" fill="#7B4FDF" opacity=".6"/>
+        <rect x="13" y="19" width="14" height="5" rx="2.5" fill="#3B5FD9"/>
+        <rect x="13" y="28" width="18" height="5" rx="2.5" fill="#5B6AFF"/>
+        <rect x="13" y="37" width="15" height="5" rx="2.5" fill="#5B6AFF"/>
+        <rect x="13" y="46" width="11" height="5" rx="2.5" fill="#7B4FDF" opacity=".8"/>
+        <rect x="42" y="14" width="22" height="32" rx="5" fill="#3B2FA0" opacity=".7"/>
+        <rect x="38" y="17" width="22" height="32" rx="5" fill="#5540C8" opacity=".85"/>
+        <defs><linearGradient id="cg" x1="33" y1="20" x2="59" y2="52" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#4A7AFF"/><stop offset="100%" stop-color="#9B5CFF"/></linearGradient></defs>
+        <rect x="33" y="20" width="24" height="34" rx="6" fill="url(#cg)"/>
+        <circle cx="42" cy="31" r="5" fill="white" opacity=".9"/>
+        <rect x="50" y="29" width="4" height="4" rx="2" fill="white" opacity=".85"/>
+        <circle cx="39" cy="46" r="2.2" fill="white" opacity=".85"/>
+        <circle cx="45" cy="46" r="2.2" fill="white" opacity=".85"/>
+        <circle cx="51" cy="46" r="2.2" fill="white" opacity=".85"/>
+      </svg>
+      <span class="logo-text">Studi<span>qoo</span></span>
+    </a>
+    <div class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Book A Call</a></li>
+      </ul>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="mob-cta">Book A Call</a>
+</div>
+
 
 <!-- Hero -->
-<section class="hero" style="padding:140px 0 80px;">
-    <div class="container">
-        <div class="hero-inner">
-            <span class="eyebrow">What We Do</span>
-            <h1>Services built for <span class="accent-text">founder-led growth</span></h1>
-            <p>Everything a founder or brand needs to go from unknown to unmissable — personal branding, content, video, paid media, Web3 and strategy, all under one roof.</p>
-        </div>
-    </div>
+<section class="hero" style="padding:140px 0 72px;">
+  <div class="container">
+    <span class="label">Services</span>
+    <h1 style="font-size:clamp(2rem,4vw,3.2rem); max-width:700px; margin-bottom:16px;">
+      Healthcare-first services.<br><em>Results your practice can measure.</em>
+    </h1>
+    <p style="color:var(--muted); max-width:560px; font-size:1rem; line-height:1.8;">
+      Every service is built around one goal — helping your practice grow with content,
+      campaigns, and creator partnerships that patients and doctors trust.
+    </p>
+  </div>
 </section>
 
-<!-- Founder Growth OS — Premium Package -->
+
+<!-- Founder Growth OS — Premium -->
 <section style="padding:0 0 80px;">
-    <div class="container">
-        <div class="premium-card hidden">
-            <div>
-                <span class="eyebrow">Premium Package</span>
-                <h2>Founder Growth OS</h2>
-                <p>A complete, done-for-you growth engine for founders — personal branding, content, video, distribution and community growth, run as one connected system.</p>
-            </div>
-            <ul class="premium-list">
-                <li><i class="fa-solid fa-circle"></i>Personal Branding</li>
-                <li><i class="fa-solid fa-circle"></i>Content Creation</li>
-                <li><i class="fa-solid fa-circle"></i>Video Repurposing</li>
-                <li><i class="fa-solid fa-circle"></i>Distribution</li>
-                <li><i class="fa-solid fa-circle"></i>Community Growth</li>
-                <li><i class="fa-solid fa-circle"></i>Performance Tracking</li>
-            </ul>
-        </div>
+  <div class="container">
+    <div class="premium-banner reveal">
+      <div>
+        <span class="label" style="background:rgba(255,255,255,.1); color:rgba(255,255,255,.6); border-color:rgba(255,255,255,.15);">Premium Package</span>
+        <h2>Founder Growth OS</h2>
+        <p>A complete done-for-you growth engine — personal branding, content, video, distribution and community growth, run as one connected system.</p>
+        <a href="contact.html" class="btn" style="background:#fff; color:var(--royal); margin-top:24px; display:inline-block;">Get Started</a>
+      </div>
+      <ul class="premium-list">
+        <li><i class="fa-solid fa-circle"></i>Personal Branding</li>
+        <li><i class="fa-solid fa-circle"></i>Content Creation</li>
+        <li><i class="fa-solid fa-circle"></i>Video Repurposing</li>
+        <li><i class="fa-solid fa-circle"></i>Paid Distribution</li>
+        <li><i class="fa-solid fa-circle"></i>Community Growth</li>
+        <li><i class="fa-solid fa-circle"></i>Performance Tracking</li>
+      </ul>
     </div>
+  </div>
 </section>
+
 
 <!-- Core Services -->
-<section class="services-bg">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">Core Services</span>
-            <h2>Seven ways we drive your growth</h2>
-        </div>
-
-        <!-- 1 -->
-        <div class="service-block featured hidden">
-            <div class="service-block-top">
-                <div class="sb-icon"><i class="fa-solid fa-id-badge"></i></div>
-                <h3>Founder Personal Branding</h3>
-                <span class="star-badge">Hero Service</span>
-            </div>
-            <p>Build authority and thought leadership for founders and executives.</p>
-            <ul class="service-checklist">
-                <li><i class="fa-solid fa-circle"></i>LinkedIn Personal Branding</li>
-                <li><i class="fa-solid fa-circle"></i>X (Twitter) Personal Branding</li>
-                <li><i class="fa-solid fa-circle"></i>Founder Positioning &amp; Messaging</li>
-                <li><i class="fa-solid fa-circle"></i>Ghostwriting</li>
-                <li><i class="fa-solid fa-circle"></i>Thought Leadership Strategy</li>
-                <li><i class="fa-solid fa-circle"></i>Audience Growth</li>
-            </ul>
-        </div>
-
-        <!-- 2 -->
-        <div class="service-block hidden">
-            <div class="service-block-top">
-                <div class="sb-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                <h3>Content Strategy &amp; Creation</h3>
-            </div>
-            <p>Turn expertise into consistent, high-performing content.</p>
-            <ul class="service-checklist">
-                <li><i class="fa-solid fa-circle"></i>Content Strategy</li>
-                <li><i class="fa-solid fa-circle"></i>Content Calendars</li>
-                <li><i class="fa-solid fa-circle"></i>Social Media Content Creation</li>
-                <li><i class="fa-solid fa-circle"></i>LinkedIn Posts</li>
-                <li><i class="fa-solid fa-circle"></i>X Threads &amp; Posts</li>
-                <li><i class="fa-solid fa-circle"></i>Carousel Design</li>
-                <li><i class="fa-solid fa-circle"></i>Newsletter Content</li>
-                <li><i class="fa-solid fa-circle"></i>Repurposing Long-Form Content</li>
-            </ul>
-        </div>
-
-        <!-- 3 -->
-        <div class="service-block hidden">
-            <div class="service-block-top">
-                <div class="sb-icon"><i class="fa-solid fa-clapperboard"></i></div>
-                <h3>Video Editing &amp; Content Repurposing</h3>
-            </div>
-            <p>Transform existing content into engaging multi-platform assets.</p>
-            <ul class="service-checklist">
-                <li><i class="fa-solid fa-circle"></i>Short-form Video Editing</li>
-                <li><i class="fa-solid fa-circle"></i>Podcast Clipping</li>
-                <li><i class="fa-solid fa-circle"></i>Webinar Clipping</li>
-                <li><i class="fa-solid fa-circle"></i>Interview Clipping</li>
-                <li><i class="fa-solid fa-circle"></i>Reels &amp; Shorts Editing</li>
-                <li><i class="fa-solid fa-circle"></i>Captioning &amp; Motion Graphics</li>
-                <li><i class="fa-solid fa-circle"></i>Multi-platform Repurposing</li>
-            </ul>
-        </div>
-
-        <!-- 4 -->
-        <div class="service-block hidden">
-            <div class="service-block-top">
-                <div class="sb-icon"><i class="fa-solid fa-hashtag"></i></div>
-                <h3>Social Media Management</h3>
-            </div>
-            <p>Manage and grow brand and founder social presence.</p>
-            <ul class="service-checklist">
-                <li><i class="fa-solid fa-circle"></i>LinkedIn Management</li>
-                <li><i class="fa-solid fa-circle"></i>X (Twitter) Management</li>
-                <li><i class="fa-solid fa-circle"></i>Content Publishing &amp; Scheduling</li>
-                <li><i class="fa-solid fa-circle"></i>Community Engagement</li>
-                <li><i class="fa-solid fa-circle"></i>Analytics &amp; Reporting</li>
-                <li><i class="fa-solid fa-circle"></i>Employee Advocacy Programs</li>
-            </ul>
-        </div>
-
-        <!-- 5 -->
-        <div class="service-block hidden">
-            <div class="service-block-top">
-                <div class="sb-icon"><i class="fa-solid fa-bullseye"></i></div>
-                <h3>Paid Growth &amp; Performance Marketing</h3>
-            </div>
-            <p>Scale reach and demand through paid distribution.</p>
-            <ul class="service-checklist">
-                <li><i class="fa-solid fa-circle"></i>X Ads Management</li>
-                <li><i class="fa-solid fa-circle"></i>Meta Ads Management</li>
-                <li><i class="fa-solid fa-circle"></i>LinkedIn Ads Management</li>
-                <li><i class="fa-solid fa-circle"></i>Campaign Strategy</li>
-                <li><i class="fa-solid fa-circle"></i>Performance Optimization</li>
-                <li><i class="fa-solid fa-circle"></i>Landing Page Recommendations</li>
-                <li><i class="fa-solid fa-circle"></i>Analytics &amp; Reporting</li>
-            </ul>
-        </div>
-
-        <!-- 6 -->
-        <div class="service-block hidden">
-            <div class="service-block-top">
-                <div class="sb-icon"><i class="fa-solid fa-cube"></i></div>
-                <h3>Web3 Growth Marketing</h3>
-            </div>
-            <p>Growth solutions tailored for Web3 projects.</p>
-            <ul class="service-checklist">
-                <li><i class="fa-solid fa-circle"></i>Community Growth</li>
-                <li><i class="fa-solid fa-circle"></i>TGE Campaigns</li>
-                <li><i class="fa-solid fa-circle"></i>Testnet Campaigns</li>
-                <li><i class="fa-solid fa-circle"></i>KOL Campaign Management</li>
-                <li><i class="fa-solid fa-circle"></i>Ecosystem Partnerships</li>
-                <li><i class="fa-solid fa-circle"></i>Launch Campaign Strategy</li>
-                <li><i class="fa-solid fa-circle"></i>Growth Consulting</li>
-            </ul>
-        </div>
-
-        <!-- 7 -->
-        <div class="service-block hidden">
-            <div class="service-block-top">
-                <div class="sb-icon"><i class="fa-solid fa-chess-knight"></i></div>
-                <h3>Fractional Growth Consulting</h3>
-            </div>
-            <p>Strategic growth support without hiring a full-time growth lead.</p>
-            <ul class="service-checklist">
-                <li><i class="fa-solid fa-circle"></i>Growth Strategy</li>
-                <li><i class="fa-solid fa-circle"></i>GTM Planning</li>
-                <li><i class="fa-solid fa-circle"></i>Campaign Planning</li>
-                <li><i class="fa-solid fa-circle"></i>Monthly Advisory</li>
-                <li><i class="fa-solid fa-circle"></i>KPI Reviews</li>
-            </ul>
-        </div>
-
+<section style="padding:0 0 96px; background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="sh" style="padding-top:72px;">
+      <span class="label">Core Services</span>
+      <h2>Seven ways we drive your growth</h2>
     </div>
+
+    <!-- 1 -->
+    <div class="sb hero-svc reveal">
+      <div class="sb-top">
+        <div class="sb-icon"><i class="fa-solid fa-id-badge"></i></div>
+        <h3>Founder &amp; Doctor Personal Branding</h3>
+        <span class="hero-badge">⭐ Hero Service</span>
+      </div>
+      <p>Build authority and thought leadership on LinkedIn and X — the channels where patients, investors, and partners make decisions about who to trust.</p>
+      <ul class="sb-list">
+        <li><i class="fa-solid fa-circle"></i>LinkedIn Personal Branding</li>
+        <li><i class="fa-solid fa-circle"></i>X (Twitter) Personal Branding</li>
+        <li><i class="fa-solid fa-circle"></i>Founder Positioning &amp; Messaging</li>
+        <li><i class="fa-solid fa-circle"></i>Ghostwriting</li>
+        <li><i class="fa-solid fa-circle"></i>Thought Leadership Strategy</li>
+        <li><i class="fa-solid fa-circle"></i>Audience Growth</li>
+      </ul>
+    </div>
+
+    <!-- 2 -->
+    <div class="sb reveal">
+      <div class="sb-top">
+        <div class="sb-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h3>Healthcare Content Strategy &amp; Creation</h3>
+      </div>
+      <p>Clinically accurate, patient-trust content that ranks, educates, and converts across every channel.</p>
+      <ul class="sb-list">
+        <li><i class="fa-solid fa-circle"></i>Content Strategy</li>
+        <li><i class="fa-solid fa-circle"></i>Content Calendars</li>
+        <li><i class="fa-solid fa-circle"></i>Social Media Content</li>
+        <li><i class="fa-solid fa-circle"></i>LinkedIn Posts</li>
+        <li><i class="fa-solid fa-circle"></i>X Threads &amp; Posts</li>
+        <li><i class="fa-solid fa-circle"></i>Carousel Design</li>
+        <li><i class="fa-solid fa-circle"></i>Newsletter Content</li>
+        <li><i class="fa-solid fa-circle"></i>Long-Form Repurposing</li>
+      </ul>
+    </div>
+
+    <!-- 3 -->
+    <div class="sb reveal">
+      <div class="sb-top">
+        <div class="sb-icon"><i class="fa-solid fa-clapperboard"></i></div>
+        <h3>Video Editing &amp; Content Repurposing</h3>
+      </div>
+      <p>Transform CMEs, webinars, clinic tours, and doctor interviews into Reels, Shorts, and clips that build your brand 24/7.</p>
+      <ul class="sb-list">
+        <li><i class="fa-solid fa-circle"></i>Short-form Video Editing</li>
+        <li><i class="fa-solid fa-circle"></i>Podcast Clipping</li>
+        <li><i class="fa-solid fa-circle"></i>Webinar Clipping</li>
+        <li><i class="fa-solid fa-circle"></i>Interview Clipping</li>
+        <li><i class="fa-solid fa-circle"></i>Reels &amp; Shorts Editing</li>
+        <li><i class="fa-solid fa-circle"></i>Captioning &amp; Motion Graphics</li>
+        <li><i class="fa-solid fa-circle"></i>Multi-platform Repurposing</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="sb reveal">
+      <div class="sb-top">
+        <div class="sb-icon"><i class="fa-solid fa-hashtag"></i></div>
+        <h3>Social Media Management</h3>
+      </div>
+      <p>Consistent, trust-first social presence across LinkedIn, Instagram, and X — managed end-to-end for your practice or brand.</p>
+      <ul class="sb-list">
+        <li><i class="fa-solid fa-circle"></i>LinkedIn Management</li>
+        <li><i class="fa-solid fa-circle"></i>X (Twitter) Management</li>
+        <li><i class="fa-solid fa-circle"></i>Content Publishing &amp; Scheduling</li>
+        <li><i class="fa-solid fa-circle"></i>Community Engagement</li>
+        <li><i class="fa-solid fa-circle"></i>Analytics &amp; Reporting</li>
+        <li><i class="fa-solid fa-circle"></i>Employee Advocacy Programs</li>
+      </ul>
+    </div>
+
+    <!-- 5 -->
+    <div class="sb reveal">
+      <div class="sb-top">
+        <div class="sb-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Paid Growth &amp; Patient Acquisition</h3>
+      </div>
+      <p>Google, Meta and LinkedIn campaigns built for healthcare compliance — qualified patient leads, not wasted ad spend.</p>
+      <ul class="sb-list">
+        <li><i class="fa-solid fa-circle"></i>X Ads Management</li>
+        <li><i class="fa-solid fa-circle"></i>Meta Ads Management</li>
+        <li><i class="fa-solid fa-circle"></i>LinkedIn Ads Management</li>
+        <li><i class="fa-solid fa-circle"></i>Campaign Strategy</li>
+        <li><i class="fa-solid fa-circle"></i>Performance Optimization</li>
+        <li><i class="fa-solid fa-circle"></i>Landing Page Recommendations</li>
+        <li><i class="fa-solid fa-circle"></i>Analytics &amp; Reporting</li>
+      </ul>
+    </div>
+
+    <!-- 6 -->
+    <div class="sb reveal">
+      <div class="sb-top">
+        <div class="sb-icon"><i class="fa-solid fa-cube"></i></div>
+        <h3>Web3 &amp; Health-Tech Growth Marketing</h3>
+      </div>
+      <p>Tailored growth solutions for health-tech startups, wellness Web3 projects, and digital health platforms.</p>
+      <ul class="sb-list">
+        <li><i class="fa-solid fa-circle"></i>Community Growth</li>
+        <li><i class="fa-solid fa-circle"></i>TGE Campaigns</li>
+        <li><i class="fa-solid fa-circle"></i>Testnet Campaigns</li>
+        <li><i class="fa-solid fa-circle"></i>KOL Campaign Management</li>
+        <li><i class="fa-solid fa-circle"></i>Ecosystem Partnerships</li>
+        <li><i class="fa-solid fa-circle"></i>Launch Campaign Strategy</li>
+        <li><i class="fa-solid fa-circle"></i>Growth Consulting</li>
+      </ul>
+    </div>
+
+    <!-- 7 -->
+    <div class="sb reveal">
+      <div class="sb-top">
+        <div class="sb-icon"><i class="fa-solid fa-chess-knight"></i></div>
+        <h3>Fractional Growth Consulting</h3>
+      </div>
+      <p>Senior growth strategy without a full-time hire — ideal for practices scaling from one to multiple locations.</p>
+      <ul class="sb-list">
+        <li><i class="fa-solid fa-circle"></i>Growth Strategy</li>
+        <li><i class="fa-solid fa-circle"></i>GTM Planning</li>
+        <li><i class="fa-solid fa-circle"></i>Campaign Planning</li>
+        <li><i class="fa-solid fa-circle"></i>Monthly Advisory</li>
+        <li><i class="fa-solid fa-circle"></i>KPI Reviews</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
+
 
 <!-- Process -->
 <section>
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">How We Work</span>
-            <h2>Our process, step by step</h2>
-        </div>
-        <div class="process-grid">
-            <div class="process-step hidden"><span class="number">01</span><h3>Discovery Call</h3><p>We learn about you, your brand and your growth goals.</p></div>
-            <div class="process-step hidden"><span class="number">02</span><h3>Strategy &amp; Plan</h3><p>A custom roadmap across branding, content, social and KOL.</p></div>
-            <div class="process-step hidden"><span class="number">03</span><h3>Execution</h3><p>Content, campaigns and creator partnerships go live.</p></div>
-            <div class="process-step hidden"><span class="number">04</span><h3>Reporting</h3><p>Transparent monthly reports and continuous improvement.</p></div>
-        </div>
+  <div class="container">
+    <div class="sh center">
+      <span class="label">How We Work</span>
+      <h2>Our process, step by step</h2>
     </div>
+    <div class="process-grid">
+      <div class="proc-step reveal"><span class="proc-num">01</span><h3>Discovery Call</h3><p>We learn about your practice, patients and growth goals.</p></div>
+      <div class="proc-step reveal"><span class="proc-num">02</span><h3>Strategy &amp; Plan</h3><p>A custom roadmap across branding, content, social and paid.</p></div>
+      <div class="proc-step reveal"><span class="proc-num">03</span><h3>Execution</h3><p>Content, campaigns and creator partnerships go live.</p></div>
+      <div class="proc-step reveal"><span class="proc-num">04</span><h3>Reporting</h3><p>Transparent monthly reports and continuous improvement.</p></div>
+    </div>
+  </div>
 </section>
 
+
 <!-- CTA -->
-<div class="cta-strip">
-    <div class="container">
-        <div class="cta-strip-inner">
-            <div>
-                <h2>Ready to build your growth engine?</h2>
-                <p>Tell us about your brand and we'll get started.</p>
-            </div>
-            <a href="contact.html" class="btn btn-primary">Get A Free Consultation</a>
-        </div>
+<div class="cta-strip" style="background:var(--soft); border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="cta-inner">
+      <div>
+        <h2>Ready to get started?</h2>
+        <p>Book a free 30-minute strategy call — no commitment, no jargon.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Book A Free Call</a>
     </div>
+  </div>
 </div>
 
 <button id="topBtn">↑</button>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <h2>Studi<span>qoo</span></h2>
-                <p>A growth studio for founders and brands — personal branding, content, video and creator partnerships under one roof.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="services.html">Founder Personal Branding</a></li>
-                    <li><a href="services.html">Content Strategy &amp; Creation</a></li>
-                    <li><a href="services.html">Video Editing &amp; Repurposing</a></li>
-                    <li><a href="services.html">Social Media Management</a></li>
-                    <li><a href="services.html">Paid Growth &amp; Performance</a></li>
-                    <li><a href="services.html">Web3 Growth Marketing</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="mailto:teamstudiqoo@gmail.com">teamstudiqoo@gmail.com</a></li>
-                    <li><a href="https://studiqoo.in">studiqoo.in</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="copyright">© 2026 Studiqoo. All rights reserved.</p>
-            <div class="footer-socials">
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><h2>Studi<span>qoo</span></h2><p>A healthcare growth studio — personal branding, content, video and creator partnerships for practices that want to grow with trust.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Founder Personal Branding</a></li><li><a href="services.html">Healthcare Content Strategy</a></li><li><a href="services.html">Video Editing &amp; Repurposing</a></li><li><a href="services.html">Social Media Management</a></li><li><a href="services.html">Patient Acquisition</a></li><li><a href="services.html">Web3 Growth</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:teamstudiqoo@gmail.com">teamstudiqoo@gmail.com</a></li><li><a href="https://studiqoo.in">studiqoo.in</a></li></ul></div>
     </div>
+    <div class="footer-bottom">
+      <p class="copyright">© 2026 Studiqoo. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>

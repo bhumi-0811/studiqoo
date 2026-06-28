@@ -1,218 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Studiqoo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Studiqoo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-    <div class="container nav-container">
-        <div class="logo">Studi<span>qoo</span></div>
-        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a class="active" href="about.html">About</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html" class="nav-cta">Book A Call</a></li>
-        </ul>
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-icon" viewBox="0 0 68 68" fill="none">
+        <circle cx="7" cy="32" r="4" fill="#5B6AFF" opacity=".7"/>
+        <circle cx="7" cy="44" r="3" fill="#7B4FDF" opacity=".6"/>
+        <rect x="13" y="19" width="14" height="5" rx="2.5" fill="#3B5FD9"/>
+        <rect x="13" y="28" width="18" height="5" rx="2.5" fill="#5B6AFF"/>
+        <rect x="13" y="37" width="15" height="5" rx="2.5" fill="#5B6AFF"/>
+        <rect x="13" y="46" width="11" height="5" rx="2.5" fill="#7B4FDF" opacity=".8"/>
+        <rect x="42" y="14" width="22" height="32" rx="5" fill="#3B2FA0" opacity=".7"/>
+        <rect x="38" y="17" width="22" height="32" rx="5" fill="#5540C8" opacity=".85"/>
+        <defs><linearGradient id="cg" x1="33" y1="20" x2="59" y2="52" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#4A7AFF"/><stop offset="100%" stop-color="#9B5CFF"/></linearGradient></defs>
+        <rect x="33" y="20" width="24" height="34" rx="6" fill="url(#cg)"/>
+        <circle cx="42" cy="31" r="5" fill="white" opacity=".9"/>
+        <rect x="50" y="29" width="4" height="4" rx="2" fill="white" opacity=".85"/>
+        <circle cx="39" cy="46" r="2.2" fill="white" opacity=".85"/>
+        <circle cx="45" cy="46" r="2.2" fill="white" opacity=".85"/>
+        <circle cx="51" cy="46" r="2.2" fill="white" opacity=".85"/>
+      </svg>
+      <span class="logo-text">Studi<span>qoo</span></span>
+    </a>
+    <div class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Book A Call</a></li>
+      </ul>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="mob-cta">Book A Call</a>
+</div>
 
-<!-- Hero -->
+
+<!-- HERO -->
 <section class="hero" style="padding:140px 0 80px;">
-    <div class="container">
-        <div class="hero-inner">
-            <span class="eyebrow">About Studiqoo</span>
-            <h1>We build <span class="accent-text">growth engines</span>, not just content</h1>
-            <p>We help founders and brands grow with bold personal branding, scroll-stopping content, and creator partnerships that actually move culture.</p>
-        </div>
-    </div>
+  <div class="container">
+    <span class="label">About Studiqoo</span>
+    <h1 style="font-size:clamp(2rem,4vw,3.2rem); max-width:700px; margin-bottom:18px;">
+      We build <em>growth engines</em><br>for healthcare brands
+    </h1>
+    <p style="color:var(--muted); max-width:560px; font-size:1rem; line-height:1.8;">
+      Studiqoo was built for healthcare founders, clinicians, and health-tech teams who need real marketing expertise — not a generalist agency.
+    </p>
+  </div>
 </section>
 
-<!-- Mission -->
-<section class="services-bg">
-    <div class="container">
-        <div class="about-grid">
-            <div>
-                <span class="section-label">Our Mission</span>
-                <h2>Helping founders grow through content &amp; culture</h2>
-                <p>Our mission is to connect ambitious founders and brands with the audiences that matter — through personal branding, content, and creators people actually trust.</p>
-                <p>We focus on craft, honesty, and measurable growth. Not vanity metrics.</p>
-            </div>
-            <div>
-                <div class="about-stats">
-                    <div class="about-stat"><strong>120+</strong><span>Founders Scaled</span></div>
-                    <div class="about-stat"><strong>800+</strong><span>Campaigns Launched</span></div>
-                    <div class="about-stat"><strong>50M+</strong><span>Content Views</span></div>
-                    <div class="about-stat"><strong>95%</strong><span>Client Retention</span></div>
-                </div>
-            </div>
+
+<!-- MISSION -->
+<section style="background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;" class="about-layout">
+
+      <div>
+        <span class="label">Our Mission</span>
+        <h2 style="font-size:clamp(1.6rem,2.6vw,2.1rem); margin-bottom:18px;">Helping practices grow through content &amp; trust</h2>
+        <p style="color:var(--muted); font-size:.95rem; line-height:1.8; margin-bottom:14px;">Our mission is to connect ambitious healthcare brands with the audiences that matter — through personal branding, content, and creators patients actually trust.</p>
+        <p style="color:var(--muted); font-size:.95rem; line-height:1.8; margin-bottom:32px;">We focus on craft, compliance, and measurable growth. Not vanity metrics.</p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:12px; overflow:hidden;">
+          <div style="background:var(--ice); padding:20px 18px;"><strong style="font-family:var(--display); font-size:1.7rem; font-weight:800; color:var(--ink); display:block; line-height:1; margin-bottom:6px;">120+</strong><span style="font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--subtle);">Brands Scaled</span></div>
+          <div style="background:var(--ice); padding:20px 18px;"><strong style="font-family:var(--display); font-size:1.7rem; font-weight:800; color:var(--ink); display:block; line-height:1; margin-bottom:6px;">800+</strong><span style="font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--subtle);">Campaigns</span></div>
+          <div style="background:var(--ice); padding:20px 18px;"><strong style="font-family:var(--display); font-size:1.7rem; font-weight:800; color:var(--ink); display:block; line-height:1; margin-bottom:6px;">50M+</strong><span style="font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--subtle);">Content Views</span></div>
+          <div style="background:var(--ice); padding:20px 18px;"><strong style="font-family:var(--display); font-size:1.7rem; font-weight:800; color:var(--ink); display:block; line-height:1; margin-bottom:6px;">95%</strong><span style="font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--subtle);">Retention</span></div>
         </div>
+      </div>
+
+      <div style="padding-top:8px;">
+        <blockquote style="border-left:2px solid var(--line); padding-left:24px; margin-bottom:28px;">
+          <p style="font-size:1rem; color:var(--ink-2); font-style:italic; line-height:1.8; margin-bottom:0;">"Studiqoo understood our patient audience from day one. The content they built actually converted — not just got likes."</p>
+          <footer style="margin-top:12px; font-size:.82rem; color:var(--subtle); font-style:normal;">Dr. Aarav Shah — Founder, Nova Health Clinic</footer>
+        </blockquote>
+        <blockquote style="border-left:2px solid var(--line); padding-left:24px; margin-bottom:28px;">
+          <p style="font-size:1rem; color:var(--ink-2); font-style:italic; line-height:1.8; margin-bottom:0;">"Our LinkedIn presence went from zero to 8K followers in 4 months. Patients now mention our posts when they book."</p>
+          <footer style="margin-top:12px; font-size:.82rem; color:var(--subtle); font-style:normal;">Riya Mehta — CEO, Pulse Health App</footer>
+        </blockquote>
+        <blockquote style="border-left:2px solid var(--line); padding-left:24px;">
+          <p style="font-size:1rem; color:var(--ink-2); font-style:italic; line-height:1.8; margin-bottom:0;">"Their fractional consulting gave us a clear GTM roadmap and measurable ROI from month one."</p>
+          <footer style="margin-top:12px; font-size:.82rem; color:var(--subtle); font-style:normal;">Devansh Rao — CEO, Axios Wellness</footer>
+        </blockquote>
+      </div>
+
     </div>
+  </div>
 </section>
 
-<!-- Team -->
+
+<!-- VALUES -->
 <section>
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">Our Team</span>
-            <h2>The people behind Studiqoo</h2>
-        </div>
-        <div class="services-grid">
-            <div class="service-card hidden">
-                <div class="service-icon"><i class="fa-solid fa-id-badge"></i></div>
-                <div class="service-card-text">
-                    <h3>Sarah Johnson</h3>
-                    <p>Founder Branding Lead</p>
-                </div>
-            </div>
-            <div class="service-card hidden">
-                <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                <div class="service-card-text">
-                    <h3>Michael Brown</h3>
-                    <p>KOL &amp; Partnerships Lead</p>
-                </div>
-            </div>
-            <div class="service-card hidden">
-                <div class="service-icon"><i class="fa-solid fa-clapperboard"></i></div>
-                <div class="service-card-text">
-                    <h3>Emma Wilson</h3>
-                    <p>Video Producer</p>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="sh center">
+      <span class="label">Our Values</span>
+      <h2>What we stand for</h2>
     </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pain-icon"><i class="fa-solid fa-shield-heart"></i></div>
+        <h3>Trust first</h3>
+        <p>Every piece of content, every campaign — designed to build genuine patient trust, not just impressions.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Measurable growth</h3>
+        <p>We're obsessed with real numbers — appointment bookings, qualified leads, cost-per-acquisition. Not vanity metrics.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3>Honest partnership</h3>
+        <p>Clear communication, transparent reporting, and strategies built for your long-term brand — not our short-term revenue.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Testimonials -->
-<section class="services-bg">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">Testimonials</span>
-            <h2>What our clients say</h2>
-        </div>
-        <div class="testimonial-grid">
-            <div class="testimonial-card hidden">
-                <p>"Studiqoo's KOL network got us in front of the exact audience we couldn't reach on our own. Inbound leads followed almost immediately."</p>
-                <h4>Aarav Shah</h4>
-                <div class="t-role">Founder, Nova Skincare</div>
-            </div>
-            <div class="testimonial-card hidden">
-                <p>"The video team understands platforms better than any agency we've worked with. Every edit is built to actually perform."</p>
-                <h4>Riya Kapoor</h4>
-                <div class="t-role">Marketing Lead, Pulse Fitness</div>
-            </div>
-            <div class="testimonial-card hidden">
-                <p>"Their personal branding work gave me a real LinkedIn presence — not just more followers. Measurable ROI from month one."</p>
-                <h4>Devansh Rao</h4>
-                <div class="t-role">CEO, Forge Coffee Co.</div>
-            </div>
-        </div>
+
+<!-- TEAM -->
+<section style="background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="sh center">
+      <span class="label">Our Team</span>
+      <h2>The people behind Studiqoo</h2>
     </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon"><i class="fa-solid fa-id-badge"></i></div>
+        <div class="svc-body">
+          <h3>Sarah Johnson</h3>
+          <p>Founder Branding Lead — LinkedIn strategy, ghostwriting and personal brand architecture.</p>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <div class="svc-body">
+          <h3>Michael Brown</h3>
+          <p>KOL &amp; Partnerships Lead — creator sourcing, campaign management and performance tracking.</p>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><i class="fa-solid fa-clapperboard"></i></div>
+        <div class="svc-body">
+          <h3>Emma Wilson</h3>
+          <p>Video Producer — short-form editing, motion graphics and multi-platform repurposing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Video -->
-<section class="video-section">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">See Us In Action</span>
-            <h2>Get to know Studiqoo</h2>
-        </div>
-        <!-- Replace YOUR_VIDEO_ID with your YouTube video ID -->
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Studiqoo Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-grid">
-            <div class="video-card hidden">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" title="Client Success Stories" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-card-content">
-                    <h4>Client Success Stories</h4>
-                    <p>Hear from the founders we've helped scale.</p>
-                </div>
-            </div>
-            <div class="video-card hidden">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" title="Behind The Scenes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-card-content">
-                    <h4>Behind The Scenes</h4>
-                    <p>How our team plans and executes every campaign.</p>
-                </div>
-            </div>
-        </div>
+
+<!-- VIDEO -->
+<section class="video-section" style="padding:96px 0;">
+  <div class="container">
+    <div class="sh center">
+      <span class="label">See Us In Action</span>
+      <h2>Get to know Studiqoo</h2>
     </div>
+
+    <!-- Replace YOUR_VIDEO_ID with your YouTube video ID -->
+    <div style="max-width:860px; margin:0 auto; border-radius:14px; overflow:hidden; border:1px solid var(--line); aspect-ratio:16/9; background:var(--soft);">
+      <iframe style="width:100%; height:100%; border:none; display:block;"
+        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+        title="Studiqoo — About Us"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:32px;">
+      <div style="border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--ice);" class="reveal">
+        <div style="aspect-ratio:16/9; background:var(--soft);">
+          <iframe style="width:100%; height:100%; border:none; display:block;"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+            title="Client Success Stories"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div style="padding:18px;">
+          <h4 style="font-size:.9rem; margin-bottom:5px;">Client Success Stories</h4>
+          <p style="font-size:.82rem; color:var(--muted);">Hear from healthcare brands we've helped scale.</p>
+        </div>
+      </div>
+
+      <div style="border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--ice);" class="reveal">
+        <div style="aspect-ratio:16/9; background:var(--soft);">
+          <iframe style="width:100%; height:100%; border:none; display:block;"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3"
+            title="Behind The Scenes"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div style="padding:18px;">
+          <h4 style="font-size:.9rem; margin-bottom:5px;">Behind The Scenes</h4>
+          <p style="font-size:.82rem; color:var(--muted);">How we plan and run every growth campaign.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 <!-- CTA -->
-<div class="cta-strip">
-    <div class="container">
-        <div class="cta-strip-inner">
-            <div>
-                <h2>Work with Studiqoo</h2>
-                <p>Let's discuss how we can help you grow.</p>
-            </div>
-            <a href="contact.html" class="btn btn-primary">Book A Call</a>
-        </div>
+<div class="cta-strip" style="background:var(--soft); border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="cta-inner">
+      <div>
+        <h2>Work with Studiqoo</h2>
+        <p>Book a free strategy call — let's discuss how we can help your practice grow.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Book A Call</a>
     </div>
+  </div>
 </div>
 
 <button id="topBtn">↑</button>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <h2>Studi<span>qoo</span></h2>
-                <p>A growth studio for founders and brands — personal branding, content, video and creator partnerships under one roof.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="services.html">Founder Personal Branding</a></li>
-                    <li><a href="services.html">Content Strategy &amp; Creation</a></li>
-                    <li><a href="services.html">Video Editing &amp; Repurposing</a></li>
-                    <li><a href="services.html">Social Media Management</a></li>
-                    <li><a href="services.html">Paid Growth &amp; Performance</a></li>
-                    <li><a href="services.html">Web3 Growth Marketing</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="mailto:teamstudiqoo@gmail.com">teamstudiqoo@gmail.com</a></li>
-                    <li><a href="https://studiqoo.in">studiqoo.in</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="copyright">© 2026 Studiqoo. All rights reserved.</p>
-            <div class="footer-socials">
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><h2>Studi<span>qoo</span></h2><p>A healthcare growth studio — personal branding, content, video and creator partnerships for practices that want to grow with trust.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Founder Personal Branding</a></li><li><a href="services.html">Healthcare Content Strategy</a></li><li><a href="services.html">Video Editing &amp; Repurposing</a></li><li><a href="services.html">Social Media Management</a></li><li><a href="services.html">Patient Acquisition</a></li><li><a href="services.html">Web3 Growth</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:teamstudiqoo@gmail.com">teamstudiqoo@gmail.com</a></li><li><a href="https://studiqoo.in">studiqoo.in</a></li></ul></div>
     </div>
+    <div class="footer-bottom">
+      <p class="copyright">© 2026 Studiqoo. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>
