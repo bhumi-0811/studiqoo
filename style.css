@@ -232,7 +232,8 @@ section { padding: 96px 0; }
    HERO
 ================================================================ */
 .hero {
-  padding: 140px 0 96px;
+  min-height: auto;
+  padding: 40px 20px 32px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1185,4 +1186,110 @@ body {
   width: 150px;
   height: auto;
   display: block;
+}
+/* ── Final Logo + Mobile Hero Fix ── */
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Gilroy", Arial, sans-serif;
+}
+
+/* Navbar logo */
+.navbar .logo-img {
+  width: auto;
+  height: 36px;
+  max-height: 36px;
+  object-fit: contain;
+}
+
+/* Main hero section */
+.hero {
+  min-height: auto !important;
+  padding: 96px 0 56px !important;
+}
+
+/* Main big logo */
+.site-logo,
+.hero-logo {
+  width: 260px !important;
+  max-width: 75vw !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto 32px !important;
+  object-fit: contain !important;
+}
+
+/* If logo is inside hero without proper class */
+.hero img.site-logo,
+.hero img.hero-logo {
+  width: 260px !important;
+  max-width: 75vw !important;
+}
+
+/* Buttons spacing */
+.hero-actions {
+  margin-top: 18px;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .hero {
+    padding: 48px 0 36px !important;
+  }
+
+  .site-logo,
+  .hero-logo,
+  .hero img.site-logo,
+  .hero img.hero-logo {
+    width: 220px !important;
+    max-width: 72vw !important;
+    margin-bottom: 28px !important;
+  }
+
+  .hero-actions {
+    gap: 14px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-trust {
+    margin-top: 36px;
+    padding-top: 24px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero {
+    padding: 36px 0 30px !important;
+  }
+
+  .site-logo,
+  .hero-logo,
+  .hero img.site-logo,
+  .hero img.hero-logo {
+    width: 200px !important;
+    max-width: 70vw !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hero-trust p {
+    font-size: .68rem;
+    line-height: 1.5;
+  }
+
+  .trust-badge {
+    font-size: .7rem;
+    padding: 5px 10px;
+  }
 }
