@@ -1,3 +1,12 @@
+/* ── Gilroy Font ── */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ============================================================
    STUDIQOO v2 — Healthcare Growth Studio
    Premium · Minimal · B2B SaaS aesthetic
@@ -16,7 +25,7 @@
   --soft:   #E8F2FC;
   --accent-bg: #D6E4F5;
 
-  --display: 'Outfit', sans-serif;
+  --display: 'Gilroy', 'Outfit', sans-serif;
   --body:    'Inter', sans-serif;
 
   --r:  10px;
@@ -112,22 +121,24 @@ section { padding: 96px 0; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
   flex-shrink: 0;
 }
 
-.logo-icon {
-  width: 34px;
-  height: 34px;
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
+/* Keep logo-text as fallback (not used now) */
 .logo-text {
-  font-family: var(--display);
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: -.03em;
+  font-family: 'Gilroy', 'Outfit', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
   color: var(--ink);
 }
 .logo-text span { color: #5B6AFF; }
