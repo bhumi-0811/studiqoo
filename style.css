@@ -1170,3 +1170,19 @@ blockquote {
   .mini-stats-grid { grid-template-columns: 1fr 1fr; }
   .hero-left h1 { font-size: 1.6rem; }
 }
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Gilroy", Arial, sans-serif;
+}
+.site-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+}
