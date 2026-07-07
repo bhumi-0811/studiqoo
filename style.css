@@ -1204,8 +1204,8 @@ body {
 /* Navbar logo */
 .navbar .logo-img {
   width: auto;
-  height: 36px;
-  max-height: 36px;
+  height: 70px;
+  max-height: 70px;
   object-fit: contain;
 }
 
