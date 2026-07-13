@@ -1293,3 +1293,262 @@ body {
     padding: 5px 10px;
   }
 }
+
+/* ================================================================
+   PREMIUM POLISH — card shadows, lift, spacing (brand colors kept)
+================================================================ */
+.pain-card, .svc-card, .result-card, .testi-card, .cmp-card,
+.client-card, .stat-cell, .why-card, .dash-kpi, .chart-box {
+  box-shadow: 0 1px 2px rgba(14,47,118,.04);
+  transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out), background .2s;
+}
+.pain-card:hover, .svc-card:hover, .result-card:hover, .testi-card:hover,
+.why-card:hover, .dash-kpi:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(14,47,118,.10);
+}
+.cmp-card:hover { transform: translateY(-3px); }
+.cmp-card.dark:hover { box-shadow: 0 20px 44px rgba(14,47,118,.28); }
+.cmp-card.light:hover { box-shadow: 0 16px 36px rgba(14,47,118,.10); }
+
+/* Section rhythm */
+section { padding-top: 88px; padding-bottom: 88px; }
+.hero { padding-top: 40px; padding-bottom: 32px; }
+@media (max-width: 768px) {
+  section { padding-top: 56px; padding-bottom: 56px; }
+}
+
+/* Stat cells become separated premium cards */
+.stats-row {
+  background: transparent;
+  gap: 16px;
+}
+.stat-cell {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.stat-cell:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(14,47,118,.10);
+  border-color: var(--powder);
+}
+
+/* Before / After badges on compare cards */
+.cmp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+.cmp-card.light .cmp-badge { background: var(--soft); color: var(--muted); }
+.cmp-card.dark .cmp-badge { background: rgba(255,255,255,.12); color: #fff; }
+
+
+/* ================================================================
+   HOW WE WORK — connected horizontal timeline
+================================================================ */
+.workflow-rail {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 48px;
+}
+.workflow-rail::before {
+  content: "";
+  position: absolute;
+  top: 27px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 14px);
+  z-index: 0;
+}
+.wf-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+}
+.wf-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--ice);
+  border: 2px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.15rem;
+  color: var(--royal);
+  margin-bottom: 18px;
+  transition: transform .25s var(--ease-out), background .25s, border-color .25s, color .25s;
+}
+.wf-step:hover .wf-icon {
+  background: var(--royal);
+  border-color: var(--royal);
+  color: #fff;
+  transform: scale(1.08);
+}
+.wf-num {
+  font-family: var(--display);
+  font-size: .68rem;
+  font-weight: 800;
+  color: var(--subtle);
+  letter-spacing: .1em;
+  margin-bottom: 6px;
+}
+.wf-step h4 { font-size: .875rem; font-weight: 700; margin-bottom: 6px; }
+.wf-step p { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .workflow-rail { grid-template-columns: 1fr; gap: 28px; margin-top: 40px; }
+  .workflow-rail::before {
+    top: 0; bottom: 0; left: 27px; right: auto; width: 2px; height: auto;
+    background: repeating-linear-gradient(180deg, var(--line) 0 8px, transparent 8px 14px);
+  }
+  .wf-step { flex-direction: row; text-align: left; gap: 18px; padding: 0; }
+  .wf-icon { margin-bottom: 0; flex-shrink: 0; }
+}
+
+
+/* ================================================================
+   MARKETING GROWTH DASHBOARD
+================================================================ */
+.dashboard-frame {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 48px;
+}
+.dash-topbar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 8px 18px;
+}
+.dash-dot { width: 11px; height: 11px; border-radius: 50%; background: var(--line); }
+.dash-topbar span {
+  margin-left: 12px;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--subtle);
+  letter-spacing: .04em;
+}
+
+.dash-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.dash-kpi {
+  background: var(--ice);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 18px 20px;
+}
+.dash-kpi span.kpi-label {
+  display: block;
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--subtle);
+  margin-bottom: 8px;
+}
+.dash-kpi strong {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+.dash-kpi .kpi-delta {
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--royal);
+  margin-left: 8px;
+}
+
+.dash-charts {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 14px;
+}
+.dash-charts-secondary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+.chart-box {
+  background: var(--ice);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 18px 20px 10px;
+}
+.chart-box h5 {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.chart-box .chart-sub {
+  font-size: .72rem;
+  color: var(--subtle);
+  margin-bottom: 10px;
+}
+.chart-box canvas { max-height: 180px; }
+
+@media (max-width: 900px) {
+  .dash-kpis { grid-template-columns: 1fr 1fr; }
+  .dash-charts, .dash-charts-secondary { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .dash-kpis { grid-template-columns: 1fr; }
+  .dashboard-frame { padding: 14px; }
+}
+
+
+/* ================================================================
+   WHY CHOOSE STUDIQOO
+================================================================ */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.why-card {
+  background: var(--ice);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: left;
+}
+.why-icon {
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--royal);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  transition: background .25s, color .25s;
+}
+.why-card:hover .why-icon { background: var(--royal); color: #fff; }
+.why-card h3 { font-size: .95rem; font-weight: 700; margin-bottom: 8px; }
+.why-card p { font-size: .83rem; color: var(--muted); line-height: 1.65; }
+
+@media (max-width: 900px) {
+  .why-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .why-grid { grid-template-columns: 1fr; }
+}
