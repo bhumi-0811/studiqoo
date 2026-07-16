@@ -54,6 +54,14 @@ function updateNavbarScroll() {
 window.addEventListener('scroll', updateNavbarScroll, { passive: true });
 updateNavbarScroll();
 
+// ── Always reset menu state on page display ──────────────
+// Fixes: drawer staying stuck open (blocking taps / looking like
+// "back doesn't work") when a page is restored from the browser's
+// back/forward cache instead of freshly loaded.
+window.addEventListener('pageshow', () => {
+  if (typeof closeMenu === 'function') closeMenu();
+});
+
 
 // ── Scroll Reveal ─────────────────────────────────────────
 const observer = new IntersectionObserver((entries) => {

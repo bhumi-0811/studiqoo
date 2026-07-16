@@ -1774,7 +1774,7 @@ section { padding-top: 88px; padding-bottom: 88px; }
 @media (max-width: 1080px) { .trust-pill { display: none; } }
 
 .nav-cta {
-  display: inline-flex !important;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   background: linear-gradient(135deg, var(--royal), #3B5FD9) !important;
@@ -1788,7 +1788,7 @@ section { padding-top: 88px; padding-bottom: 88px; }
   position: fixed;
   inset: 0;
   background: rgba(6,15,30,.45);
-  z-index: 998;
+  z-index: 1150;
   opacity: 0;
   transition: opacity .3s;
 }
@@ -1805,9 +1805,10 @@ section { padding-top: 88px; padding-bottom: 88px; }
   border-bottom: none;
   border-left: 1px solid var(--line);
   box-shadow: -12px 0 40px rgba(14,47,118,.16);
-  z-index: 999;
+  z-index: 1200;
   padding: 0;
   transition: right .35s var(--ease-out);
+  overflow-y: auto;
 }
 .mobile-nav.open { right: 0; }
 
