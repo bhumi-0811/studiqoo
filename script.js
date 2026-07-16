@@ -1,18 +1,22 @@
 /* STUDIQOO v2 — Main JS */
 
-// ── Mobile Menu ──────────────────────────────────────────
-const hamburger  = document.getElementById('hamburger');
-const mobileNav  = document.getElementById('mobileNav');
+// ── Mobile Menu (slide-in drawer) ────────────────────────
+const hamburger     = document.getElementById('hamburger');
+const mobileNav     = document.getElementById('mobileNav');
+const mobileOverlay = document.getElementById('mobileOverlay');
+const mobileClose   = document.getElementById('mobileClose');
 
 function openMenu() {
   mobileNav.classList.add('open');
+  if (mobileOverlay) mobileOverlay.classList.add('open');
   const i = hamburger.querySelector('i');
   if (i) i.className = 'fa-solid fa-xmark';
-  document.body.style.overflow = '';
+  document.body.style.overflow = 'hidden';
 }
 
 function closeMenu() {
   mobileNav.classList.remove('open');
+  if (mobileOverlay) mobileOverlay.classList.remove('open');
   const i = hamburger.querySelector('i');
   if (i) i.className = 'fa-solid fa-bars';
   document.body.style.overflow = '';
@@ -24,27 +28,31 @@ if (hamburger && mobileNav) {
     mobileNav.classList.contains('open') ? closeMenu() : openMenu();
   });
 
-  // Close on any link click
+  if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+  if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+
+  // Close on nav link click (but not the Services expand trigger)
   mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-
-  // Close on outside click
-  document.addEventListener('click', (e) => {
-    if (!mobileNav.contains(e.target) && !hamburger.contains(e.target)) closeMenu();
-  });
-
-  // Close on scroll
-  window.addEventListener('scroll', closeMenu, { passive: true });
 }
 
+// ── Mobile "Services" submenu expand ─────────────────────
+const mobServicesTrigger = document.getElementById('mobServicesTrigger');
+const mobServicesSubmenu = document.getElementById('mobServicesSubmenu');
+if (mobServicesTrigger && mobServicesSubmenu) {
+  mobServicesTrigger.addEventListener('click', () => {
+    mobServicesTrigger.classList.toggle('open');
+    mobServicesSubmenu.classList.toggle('open');
+  });
+}
 
-// ── Navbar shadow on scroll ───────────────────────────────
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
+// ── Navbar glass + shrink on scroll ──────────────────────
+const navbar = document.getElementById('navbar');
+function updateNavbarScroll() {
   if (!navbar) return;
-  navbar.style.boxShadow = window.scrollY > 12
-    ? '0 2px 20px rgba(14,47,118,.09)'
-    : 'none';
-}, { passive: true });
+  navbar.classList.toggle('scrolled', window.scrollY > 12);
+}
+window.addEventListener('scroll', updateNavbarScroll, { passive: true });
+updateNavbarScroll();
 
 
 // ── Scroll Reveal ─────────────────────────────────────────

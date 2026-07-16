@@ -61,29 +61,97 @@
 </head>
 <body>
 
-<nav class="navbar">
+<!-- ═══════════════════════════════════════════
+     TOP BAR
+═══════════════════════════════════════════ -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span><i class="fa-solid fa-rocket"></i> Helping Clinics Grow Online</span>
+    <span class="topbar-divider">•</span>
+    <a href="contact.html" class="topbar-secondary"><i class="fa-solid fa-phone"></i> Free Consultation</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
   <div class="container nav-inner">
+
+    <!-- Logo -->
     <a href="index.html" class="logo">
-      <img src="assets/logo.png" alt="Studiqoo" class="logo-img">
+      <img src="assets/logo.png" alt="Studiqoo" class="logo-img" />
+      <span class="logo-tagline">Healthcare Marketing Agency</span>
     </a>
+
+    <!-- Desktop nav -->
     <div class="desktop-nav">
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="contact.html" class="nav-cta">Book A Call</a></li>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li class="has-mega">
+          <a class="nav-link active" href="services.html">Services <i class="fa-solid fa-chevron-down mega-caret"></i></a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <span class="mega-heading">Digital Marketing</span>
+              <a href="services.html"><i class="fa-solid fa-user-doctor"></i>Clinic Marketing</a>
+              <a href="services.html"><i class="fa-solid fa-magnifying-glass"></i>SEO</a>
+              <a href="services.html"><i class="fa-brands fa-meta"></i>Meta Ads</a>
+              <a href="services.html"><i class="fa-brands fa-google"></i>Google Ads</a>
+            </div>
+            <div class="mega-col">
+              <span class="mega-heading">Brand &amp; Web</span>
+              <a href="services.html"><i class="fa-solid fa-globe"></i>Website Development</a>
+              <a href="services.html"><i class="fa-solid fa-palette"></i>Branding</a>
+              <a href="services.html"><i class="fa-solid fa-pen-nib"></i>Content</a>
+            </div>
+            <a href="services.html" class="mega-viewall">View All Services <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+
+    <div class="nav-right">
+      <span class="trust-pill"><i class="fa-solid fa-star"></i> Trusted by 50+ Clinics</span>
+      <a href="contact.html" class="nav-cta">
+        <i class="fa-solid fa-rocket"></i> Get Free Audit
+        <i class="fa-solid fa-arrow-right cta-arrow"></i>
+      </a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
   </div>
 </nav>
+<div class="mega-backdrop"></div>
+
+<!-- Mobile drawer -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
 <div class="mobile-nav" id="mobileNav">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="contact.html" class="mob-cta">Book A Call</a>
+  <div class="mobile-nav-header">
+    <img src="assets/logo.png" alt="Studiqoo" class="mobile-logo" />
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <a href="index.html" class="mob-link"><i class="fa-solid fa-house"></i>Home</a>
+  <div class="mob-expand">
+    <button class="mob-link mob-expand-trigger" id="mobServicesTrigger" type="button">
+      <span><i class="fa-solid fa-briefcase"></i>Services</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="mob-submenu" id="mobServicesSubmenu">
+      <a href="services.html">Clinic Marketing</a>
+      <a href="services.html">SEO</a>
+      <a href="services.html">Website Development</a>
+      <a href="services.html">Branding</a>
+    </div>
+  </div>
+  <a href="about.html" class="mob-link"><i class="fa-solid fa-users"></i>About</a>
+  <a href="contact.html" class="mob-link"><i class="fa-solid fa-phone"></i>Contact</a>
+  <a href="contact.html" class="mob-cta">Get Free Audit</a>
 </div>
 
 
@@ -225,7 +293,7 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
-      <div class="footer-brand"><a href="index.html"><img src="assets/logo.png" alt="Studiqoo" style="height:32px; width:auto; display:block; margin-bottom:2px; filter:brightness(10);"></a><p>A healthcare growth studio — personal branding, content, video and creator partnerships for practices that want to grow with trust.</p></div>
+      <div class="footer-brand"><a href="index.html"><img src="assets/logo-white.png" alt="Studiqoo" style="height:40px; width:auto; display:block; margin-bottom:2px;"></a><p>A healthcare marketing agency — personal branding, content, video and creator partnerships for practices that want to grow with trust.</p></div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Founder Personal Branding</a></li><li><a href="services.html">Healthcare Content Strategy</a></li><li><a href="services.html">Video Editing &amp; Repurposing</a></li><li><a href="services.html">Social Media Management</a></li><li><a href="services.html">Patient Acquisition</a></li><li><a href="services.html">Web3 Growth</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:teamstudiqoo@gmail.com">teamstudiqoo@gmail.com</a></li><li><a href="https://studiqoo.in">studiqoo.in</a></li></ul></div>
