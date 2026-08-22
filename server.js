@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 const DATA_DIR = path.join(__dirname, "data");
 const DB_FILE = path.join(DATA_DIR, "contacts.json");
+const NEWSLETTER_FILE = path.join(DATA_DIR, "newsletter.json");
 
 // ---- Make sure the "database" file exists ----
 // This is the "blank database" — it starts as an
@@ -25,8 +26,12 @@ if (!fs.existsSync(DB_FILE)) {
     fs.writeFileSync(DB_FILE, "[]", "utf-8");
 }
 
-function readContacts() {
-    const raw = fs.readFileSync(DB_FILE, "utf-8");
+if (!fs.existsSync(NEWSLETTER_FILE)) {
+    fs.writeFileSync(NEWSLETTER_FILE, "[]", "utf-8");
+}
+
+function readJSON(file) {
+    const raw = fs.readFileSync(file, "utf-8");
     try {
         return JSON.parse(raw);
     } catch {
@@ -34,9 +39,12 @@ function readContacts() {
     }
 }
 
-function writeContacts(contacts) {
-    fs.writeFileSync(DB_FILE, JSON.stringify(contacts, null, 2), "utf-8");
+function writeJSON(file, data) {
+    fs.writeFileSync(file, JSON.stringify(data, null, 2), "utf-8");
 }
+
+function readContacts() { return readJSON(DB_FILE); }
+function writeContacts(contacts) { writeJSON(DB_FILE, contacts); }
 
 // ---- Middleware ----
 app.use(express.json());
@@ -74,6 +82,41 @@ app.post("/api/contact", (req, res) => {
 // Visit http://localhost:3000/api/contacts in your browser
 app.get("/api/contacts", (req, res) => {
     res.json(readContacts());
+});
+
+// ---- Save a new newsletter signup ----
+app.post("/api/newsletter", (req, res) => {
+
+    const { email } = req.body;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email || !emailPattern.test(String(email))) {
+        return res.status(400).json({
+            error: "A valid email address is required."
+        });
+    }
+
+    const cleanEmail = String(email).trim().toLowerCase().slice(0, 200);
+    const subscribers = readJSON(NEWSLETTER_FILE);
+
+    if (subscribers.some(s => s.email === cleanEmail)) {
+        return res.status(200).json({ success: true, alreadySubscribed: true });
+    }
+
+    subscribers.push({
+        id: Date.now().toString(),
+        email: cleanEmail,
+        subscribedAt: new Date().toISOString()
+    });
+    writeJSON(NEWSLETTER_FILE, subscribers);
+
+    res.status(201).json({ success: true });
+});
+
+// ---- View all newsletter subscribers (simple admin view) ----
+// Visit http://localhost:3000/api/newsletter in your browser
+app.get("/api/newsletter", (req, res) => {
+    res.json(readJSON(NEWSLETTER_FILE));
 });
 
 app.listen(PORT, () => {
