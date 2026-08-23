@@ -3181,3 +3181,229 @@ a, button { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 768px) {
   .hero-flow-bg { filter: blur(34px); opacity: .6; }
 }
+
+/* ================================================================================
+   ================================================================================
+   STUDIQOO — "WHO WE HELP" / INDUSTRIES SECTION
+   Three glass cards: Healthcare, Education, and an open-ended "Growing
+   Businesses" card that signals the list keeps expanding. Built with the
+   same tokens/shadows as the rest of the site so it needs no new theme work.
+   ================================================================================
+   ================================================================================ */
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+@media (max-width: 900px) {
+  .industry-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+.industry-card {
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 32px 28px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out), background .3s ease;
+}
+.industry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  background: var(--soft);
+}
+
+.industry-icon {
+  width: 48px; height: 48px;
+  border-radius: var(--r2);
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(61,123,255,.12);
+  color: var(--ink-2);
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+  border: 1px solid var(--line);
+  transition: background .3s ease, color .3s ease, transform .3s var(--ease-out);
+}
+.industry-card:hover .industry-icon {
+  background: var(--grad-cta);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.industry-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+.industry-card > p { font-size: .875rem; color: var(--muted); line-height: 1.65; margin-bottom: 18px; }
+
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.industry-tags span {
+  font-size: .72rem;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(61,123,255,.08);
+  border: 1px solid var(--line);
+  color: var(--subtle);
+}
+
+/* ================================================================================
+   ================================================================================
+   STUDIQOO — "WHO WE HELP" LANDING / SELECTOR SCREEN (index.html only)
+   A minimal, full-screen entry point. Reuses the existing hero background
+   system (aurora, particles, flowing canvas, glow ring) — no new visual
+   language needed. Two large interactive cards route into healthcare.html
+   and education.html, with a short fade transition on click.
+   ================================================================================
+   ================================================================================ */
+
+.back-link { color: var(--ink-2) !important; font-weight: 700; }
+.back-link i { margin-right: 5px; }
+
+.selector-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 110px;
+  padding-bottom: 64px;
+}
+
+.selector-inner { width: 100%; }
+
+.selector-heading {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+  position: relative;
+  z-index: 1;
+}
+.selector-heading h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  margin: 18px 0 16px;
+  color: var(--ink);
+}
+.selector-heading p {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.selector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 880px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 760px) {
+  .selector-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+.selector-card {
+  display: block;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 44px 36px;
+  text-align: center;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: var(--shadow-card);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform .4s var(--ease-out), box-shadow .4s var(--ease-out), border-color .4s ease, background .4s ease;
+}
+.selector-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--grad-cta);
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+.selector-card:hover {
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(61,123,255,.4);
+  box-shadow: var(--shadow-card-hover);
+}
+.selector-card:hover::before { opacity: .06; }
+
+.selector-icon {
+  width: 64px; height: 64px;
+  margin: 0 auto 22px;
+  border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(61,123,255,.12);
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  font-size: 1.5rem;
+  transition: background .4s ease, color .4s ease, transform .4s var(--ease-out);
+}
+.selector-card:hover .selector-icon {
+  background: var(--grad-cta);
+  color: #fff;
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.selector-card h2 { font-size: 1.4rem; font-weight: 800; color: var(--ink); margin-bottom: 10px; }
+.selector-card > p { font-size: .92rem; color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
+
+.selector-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+.selector-cta i { transition: transform .35s var(--ease-out); }
+.selector-card:hover .selector-cta { color: var(--royal); }
+.selector-card:hover .selector-cta i { transform: translateX(5px); }
+
+.selector-note {
+  text-align: center;
+  margin-top: 36px;
+  font-size: .82rem;
+  color: var(--subtle);
+  position: relative;
+  z-index: 1;
+}
+
+.landing-footer { padding-top: 32px; padding-bottom: 32px; background: transparent; box-shadow: none; }
+.landing-footer::before { display: none; }
+
+/* Page transition overlay — brief fade before navigating to the chosen path */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: var(--bg-deep);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .38s ease;
+}
+.page-transition.active { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .selector-card, .selector-icon, .selector-cta i { transition: none; }
+}
+
+/* Staggered entrance for the selector screen (mirrors the hero's own entrance) */
+@media (prefers-reduced-motion: no-preference) {
+  .selector-heading > .label { animation: heroEnter .85s var(--ease-out) both; }
+  .selector-heading > h1     { animation: heroEnter .9s  var(--ease-out) .10s both; }
+  .selector-heading > p      { animation: heroEnter .9s  var(--ease-out) .20s both; }
+  .selector-grid .selector-card:nth-child(1) { animation: heroEnterRight .9s var(--ease-out) .32s both; }
+  .selector-grid .selector-card:nth-child(2) { animation: heroEnterRight .9s var(--ease-out) .42s both; }
+  .selector-note { animation: heroEnter .8s var(--ease-out) .54s both; }
+}

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studiqoo | Healthcare Marketing Studio</title>
+<script>
+  /* Applies the saved theme before first paint to avoid a flash of the wrong theme. */
+  (function () {
+    try {
+      var saved = localStorage.getItem('studiqoo-theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    } catch (e) {}
+  })();
+</script>
+<meta name="description" content="Studiqoo is a growth studio for healthcare — partnering with clinics, hospitals, dental, aesthetic and diagnostic brands to strengthen their digital presence through thoughtful strategy, creative execution, and performance marketing.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-flow" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+
+    <a href="index.html" class="logo">
+      <img src="assets/logo-white.png" alt="Studiqoo" class="logo-img" id="navLogo" />
+    </a>
+
+    <div class="desktop-nav">
+      <ul class="nav-links">
+        <li><a class="nav-link back-link" href="index.html"><i class="fa-solid fa-arrow-left-long"></i> Who We Help</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#process">How We Work</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between dark and light theme">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+      </button>
+      <a href="#contact" class="nav-cta">
+        <i class="fa-solid fa-calendar-check"></i> Book a Strategy Call
+      </a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <img src="assets/logo-white.png" alt="Studiqoo" class="mobile-logo" id="mobileNavLogo" />
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <a href="index.html" class="mob-link back-link"><i class="fa-solid fa-arrow-left-long"></i>Who We Help</a>
+  <a href="#about" class="mob-link"><i class="fa-solid fa-users"></i>About</a>
+  <a href="#services" class="mob-link"><i class="fa-solid fa-briefcase"></i>Services</a>
+  <a href="#process" class="mob-link"><i class="fa-solid fa-diagram-project"></i>How We Work</a>
+  <a href="#contact" class="mob-link"><i class="fa-solid fa-phone"></i>Contact</a>
+  <button class="mob-theme-toggle" id="mobThemeToggle" type="button">
+    <span class="mob-theme-label"><i class="fa-solid fa-circle-half-stroke mob-theme-icon"></i>Dark / Light theme</span>
+    <span class="mob-theme-track"></span>
+  </button>
+  <a href="#contact" class="mob-cta">Book a Strategy Call</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero" id="top">
+  <canvas class="hero-flow-bg" id="heroFlowBg" aria-hidden="true"></canvas>
+  <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
+  <div class="hero-glow-ring" aria-hidden="true"><span class="hero-glow-core"></span></div>
+  <div class="hero-rays" aria-hidden="true"></div>
+  <div class="container hero-grid">
+
+    <div class="hero-left">
+      <span class="label"><i class="fa-solid fa-heart-pulse" style="margin-right:6px;"></i>Patients should trust you before they ever meet you.</span>
+
+      <h1>We help healthcare brands grow their business.</h1>
+
+      <p class="hero-subheading">
+        Helping healthcare practices <em>become <span class="swash">the brand</span> in their market.</em>
+      </p>
+
+      <p>
+        We partner with clinics, hospitals, dental, aesthetic, and diagnostic brands
+        to strengthen their digital presence through thoughtful strategy, creative
+        execution, and performance marketing.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book a Strategy Call</a>
+        <a href="#services" class="btn btn-outline">See Our Services</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     POSITIONING STATEMENT
+═══════════════════════════════════════════ -->
+<section style="padding-top:56px; padding-bottom:56px; border-bottom:1px solid var(--line);">
+  <div class="container" style="text-align:center;">
+    <p style="font-size:1.05rem; font-weight:600; color:var(--ink-2); max-width:640px; margin:0 auto;">
+      Helping healthcare teams build stronger digital brands.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     PROBLEM
+═══════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <div class="sh center">
+      <span class="label">The Problem</span>
+      <h2>Marketing should support your practice,<br>not become another challenge to manage.</h2>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pain-icon"><i class="fa-solid fa-magnifying-glass-location"></i></div>
+        <h3>Low Online Visibility</h3>
+        <p>Patients can't find you when they're searching for care.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><i class="fa-solid fa-swatchbook"></i></div>
+        <h3>Inconsistent Branding</h3>
+        <p>Your practice looks different across every channel.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><i class="fa-solid fa-filter-circle-xmark"></i></div>
+        <h3>A Website That Doesn't Convert</h3>
+        <p>Visitors land on your site and leave without enquiring.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Difficulty Attracting Qualified Patients</h3>
+        <p>Enquiries come in, but not the right ones for your practice.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><i class="fa-solid fa-route"></i></div>
+        <h3>Marketing Without a Clear Strategy</h3>
+        <p>Effort goes into channels with no plan tying them together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     PROCESS
+═══════════════════════════════════════════ -->
+<section id="process" style="background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="sh center">
+      <span class="label">How We Work</span>
+      <h2>A clear process, from research to results</h2>
+    </div>
+
+    <div class="workflow-rail" id="workflowRail">
+      <div class="wf-traveler" id="wfTraveler" aria-hidden="true"></div>
+      <div class="wf-step reveal">
+        <div class="wf-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <span class="wf-num">STEP 01</span>
+        <h4>Discover</h4>
+        <p>Understanding your practice, patients, and market.</p>
+      </div>
+      <div class="wf-step reveal">
+        <div class="wf-icon"><i class="fa-solid fa-chess"></i></div>
+        <span class="wf-num">STEP 02</span>
+        <h4>Strategy</h4>
+        <p>A plan built around your specific goals.</p>
+      </div>
+      <div class="wf-step reveal">
+        <div class="wf-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <span class="wf-num">STEP 03</span>
+        <h4>Create</h4>
+        <p>Content and design that reflect your brand.</p>
+      </div>
+      <div class="wf-step reveal">
+        <div class="wf-icon"><i class="fa-solid fa-rocket"></i></div>
+        <span class="wf-num">STEP 04</span>
+        <h4>Launch</h4>
+        <p>Campaigns and content go live across channels.</p>
+      </div>
+      <div class="wf-step reveal">
+        <div class="wf-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <span class="wf-num">STEP 05</span>
+        <h4>Grow</h4>
+        <p>Tracking what's actually working, and what isn't.</p>
+      </div>
+      <div class="wf-step reveal">
+        <div class="wf-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+        <span class="wf-num">STEP 06</span>
+        <h4>Optimize</h4>
+        <p>Refining the strategy as results come in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="sh center">
+      <span class="label">Services</span>
+      <h2>Everything your healthcare brand needs to grow online.</h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon"><i class="fa-solid fa-chess-knight"></i></div>
+        <div class="svc-body">
+          <h3>Brand Strategy</h3>
+          <p>Positioning and messaging that reflects how your practice actually wants to be known.</p>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><i class="fa-solid fa-display"></i></div>
+        <div class="svc-body">
+          <h3>Website Design &amp; Conversion</h3>
+          <p>Websites built to turn visitors into enquiries, not just look good.</p>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <div class="svc-body">
+          <h3>Content Marketing</h3>
+          <p>Clinically accurate content that educates and builds trust over time.</p>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><i class="fa-solid fa-id-badge"></i></div>
+        <div class="svc-body">
+          <h3>Personal Branding</h3>
+          <p>Helping founders and doctors build authority on LinkedIn and beyond.</p>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <div class="svc-body">
+          <h3>Performance Marketing</h3>
+          <p>Google and Meta campaigns built for healthcare compliance.</p>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><i class="fa-solid fa-chart-column"></i></div>
+        <div class="svc-body">
+          <h3>Analytics &amp; Optimisation</h3>
+          <p>Clear reporting on what's driving enquiries, and what to adjust.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     BEFORE vs AFTER
+═══════════════════════════════════════════ -->
+<section style="background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="sh center">
+      <span class="label">The Difference</span>
+      <h2>What thoughtful marketing changes</h2>
+    </div>
+
+    <div class="compare-grid">
+      <div class="cmp-card light reveal">
+        <span class="cmp-badge"><i class="fa-solid fa-xmark"></i> Without A Clear Strategy</span>
+        <h3>Marketing that adds to the workload</h3>
+        <ul>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-xmark"></i></div><span>Low visibility where patients are actually searching</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-xmark"></i></div><span>Branding that looks different across every channel</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-xmark"></i></div><span>A website that doesn't turn visitors into enquiries</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-xmark"></i></div><span>Effort spread across channels with no strategy tying them together</span></li>
+        </ul>
+      </div>
+      <div class="cmp-card dark reveal">
+        <span class="cmp-badge"><i class="fa-solid fa-check"></i> With Studiqoo</span>
+        <h3>Marketing built on trust and clarity</h3>
+        <ul>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-check"></i></div><span>A consistent brand patients recognise and trust</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-check"></i></div><span>A website designed around conversion, not just design</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-check"></i></div><span>Content built on clinical accuracy and clarity</span></li>
+          <li><div class="cmp-li-icon"><i class="fa-solid fa-check"></i></div><span>Transparent reporting tied to real outcomes</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="sh center">
+      <span class="label">About Studiqoo</span>
+      <h2>Healthcare deserves marketing that's built on trust.</h2>
+    </div>
+
+    <div style="max-width:680px; margin:0 auto 56px; text-align:center;">
+      <p style="color:var(--muted); font-size:.95rem; line-height:1.8;">
+        Helping healthcare businesses build trust through thoughtful marketing. We're a
+        small, focused team working with clinics, healthcare startups, and medical brands —
+        combining strategy, creative execution, and performance marketing under one roof.
+      </p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-crosshairs"></i></div>
+        <h3>Clarity Before Complexity</h3>
+        <p>We start with what's actually needed, not every channel at once.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-seedling"></i></div>
+        <h3>Long-Term Thinking</h3>
+        <p>We build brands meant to compound, not campaigns that fade.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Evidence Over Assumptions</h3>
+        <p>Decisions are shaped by data and results, not guesswork.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h3>Thoughtful Execution</h3>
+        <p>Every piece of content and every campaign is made with care.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>Transparent Communication</h3>
+        <p>You always know what we're doing and why.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     RESOURCES
+═══════════════════════════════════════════ -->
+<section style="background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding-top:56px; padding-bottom:56px;">
+  <div class="container" style="text-align:center;">
+    <span class="label">Topics We Help With</span>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px;">
+      <span class="trust-badge" style="background:#fff;">Healthcare Marketing</span>
+      <span class="trust-badge" style="background:#fff;">SEO</span>
+      <span class="trust-badge" style="background:#fff;">Branding</span>
+      <span class="trust-badge" style="background:#fff;">Patient Acquisition</span>
+      <span class="trust-badge" style="background:#fff;">Content Strategy</span>
+      <span class="trust-badge" style="background:#fff;">Clinic Websites</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <div class="sh">
+      <span class="label">FAQ</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+
+    <div class="faq-list" style="max-width:760px;">
+      <div class="faq-item">
+        <button class="faq-q">Do you only work with healthcare brands?</button>
+        <div class="faq-a">Healthcare is our primary focus, but we also work with other trust-driven service businesses. If patient or client trust matters to your growth, we're likely a fit.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How quickly can we expect results?</button>
+        <div class="faq-a">Paid campaigns typically show early signals within a few weeks. Organic content, branding, and SEO build momentum over a few months. We set clear expectations from the discovery call so you know what's realistic.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there a minimum engagement length?</button>
+        <div class="faq-a">We work on a 3-month minimum, which gives strategy and campaigns enough time to show real results. Most clients continue on a rolling monthly basis after that.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do you handle medical content accuracy?</button>
+        <div class="faq-a">All medical content goes through a review step. We work with your clinical team, or include a doctor-review step in our content process, to keep everything accurate and compliant.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How much does working with Studiqoo cost?</button>
+        <div class="faq-a">Pricing depends on the channels and content volume your practice needs — we scope it together on your discovery call, with no hidden setup fees.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Who owns the content and creative assets you produce?</button>
+        <div class="faq-a">You do — fully. Every video, post, script, and creative asset we produce belongs to your practice, indefinitely.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What kind of healthcare practices do you work with?</button>
+        <div class="faq-a">Clinics, dermatologists, dentists, diagnostic centers, hospitals, physiotherapy practices, and healthcare startups.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FINAL CTA
+═══════════════════════════════════════════ -->
+<div class="cta-strip">
+  <div class="container">
+    <div class="cta-inner">
+      <div>
+        <h2>Let's build something that lasts.</h2>
+        <p>Tell us about your goals, and we'll explore how thoughtful strategy and creative execution can support your next stage of growth.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary">Book a Strategy Call</a>
+    </div>
+  </div>
+</div>
+
+<button id="topBtn">↑</button>
+
+
+<!-- ═══════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════ -->
+<section id="contact" style="padding-top:96px;">
+  <div class="container">
+    <div class="contact-wrap">
+
+      <div class="contact-info">
+        <span class="label">Get In Touch</span>
+        <h2>Let's grow your practice together</h2>
+        <p>Tell us about your brand and goals. We'll put together a tailored growth plan and reply within 24 hours.</p>
+
+        <div class="contact-detail"><i class="fa-solid fa-envelope"></i>teamstudiqoo@gmail.com</div>
+        <div class="contact-detail"><i class="fa-solid fa-globe"></i>studiqoo.in</div>
+        <div class="contact-detail"><i class="fa-regular fa-clock"></i>Mon–Fri, 9am–6pm IST</div>
+
+        <div style="margin-top:36px; padding:24px; background:var(--soft); border:1px solid var(--line); border-radius:12px;">
+          <p style="font-size:.82rem; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--subtle); margin-bottom:14px;">What happens next?</p>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <span style="font-family:var(--display); font-size:.78rem; font-weight:700; color:var(--ink-2); background:var(--accent-bg); border-radius:4px; padding:3px 8px; flex-shrink:0; margin-top:1px;">01</span>
+              <span style="font-size:.875rem; color:var(--muted);">We review your enquiry and research your brand within 24 hours.</span>
+            </div>
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <span style="font-family:var(--display); font-size:.78rem; font-weight:700; color:var(--ink-2); background:var(--accent-bg); border-radius:4px; padding:3px 8px; flex-shrink:0; margin-top:1px;">02</span>
+              <span style="font-size:.875rem; color:var(--muted);">We schedule a free 30-minute discovery call to understand your goals.</span>
+            </div>
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <span style="font-family:var(--display); font-size:.78rem; font-weight:700; color:var(--ink-2); background:var(--accent-bg); border-radius:4px; padding:3px 8px; flex-shrink:0; margin-top:1px;">03</span>
+              <span style="font-size:.875rem; color:var(--muted);">We send a tailored growth proposal with clear deliverables and pricing.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <input type="text"  name="fullName" placeholder="Full Name" required>
+        <input type="email" name="email"    placeholder="Email Address" required>
+        <input type="tel"   name="phone"    placeholder="Phone Number">
+        <input type="text"  name="practice" placeholder="Practice / Brand Name">
+        <select name="service">
+          <option value="" disabled selected>Service You're Interested In</option>
+          <option>Brand Strategy</option>
+          <option>Website Design &amp; Conversion</option>
+          <option>Content Marketing</option>
+          <option>Personal Branding</option>
+          <option>Performance Marketing</option>
+          <option>Analytics &amp; Optimisation</option>
+        </select>
+        <textarea name="message" rows="5" placeholder="Tell us about your practice and what you're trying to achieve" required></textarea>
+        <button class="btn btn-primary" type="submit">Send Message →</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-newsletter">
+      <div>
+        <h4>Stay Updated</h4>
+        <p>Occasional, useful notes on healthcare marketing — no spam.</p>
+      </div>
+      <div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="newsletter-msg" id="newsletterMsg"></div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html"><img src="assets/logo-white.png" alt="Studiqoo" style="height:40px; width:auto; display:block; margin-bottom:2px;"></a>
+        <p>Thoughtful strategy, creative execution, and digital marketing for modern healthcare brands.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Brand Strategy</a></li>
+          <li><a href="#services">Website Design &amp; Conversion</a></li>
+          <li><a href="#services">Content Marketing</a></li>
+          <li><a href="#services">Personal Branding</a></li>
+          <li><a href="#services">Performance Marketing</a></li>
+          <li><a href="#services">Analytics &amp; Optimisation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="index.html">Who We Help</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:teamstudiqoo@gmail.com">teamstudiqoo@gmail.com</a></li>
+          <li><a href="https://studiqoo.in">studiqoo.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">© 2026 Studiqoo. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

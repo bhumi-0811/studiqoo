@@ -7,17 +7,19 @@ const mobileOverlay = document.getElementById('mobileOverlay');
 const mobileClose   = document.getElementById('mobileClose');
 
 function resetMenuUI() {
+  if (!mobileNav) return;
   mobileNav.classList.remove('open');
   if (mobileOverlay) mobileOverlay.classList.remove('open');
-  const i = hamburger.querySelector('i');
+  const i = hamburger && hamburger.querySelector('i');
   if (i) i.className = 'fa-solid fa-bars';
   document.body.style.overflow = '';
 }
 
 function openMenu() {
+  if (!mobileNav) return;
   mobileNav.classList.add('open');
   if (mobileOverlay) mobileOverlay.classList.add('open');
-  const i = hamburger.querySelector('i');
+  const i = hamburger && hamburger.querySelector('i');
   if (i) i.className = 'fa-solid fa-xmark';
   document.body.style.overflow = 'hidden';
   // Push a history entry so the phone/browser "back" button closes
@@ -57,7 +59,7 @@ if (hamburger && mobileNav) {
 // Phone/browser back button (or swipe-back gesture) while drawer is open
 // closes the drawer instead of leaving the page or appearing to do nothing.
 window.addEventListener('popstate', () => {
-  if (mobileNav.classList.contains('open')) resetMenuUI();
+  if (mobileNav && mobileNav.classList.contains('open')) resetMenuUI();
 });
 
 // ── Navbar glass + shrink on scroll ──────────────────────
@@ -467,6 +469,26 @@ if (form) {
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(init, 200);
+  });
+})();
+
+
+// ── "Who We Help" selector — smooth fade transition on navigate ──
+(function () {
+  const links = document.querySelectorAll('[data-selector-link]');
+  const overlay = document.getElementById('pageTransition');
+  if (!links.length || !overlay) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (!href || prefersReduced) return; // let it navigate immediately
+      e.preventDefault();
+      overlay.classList.add('active');
+      setTimeout(() => { window.location.href = href; }, 380);
+    });
   });
 })();
 
